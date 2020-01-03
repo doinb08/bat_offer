@@ -6,13 +6,11 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.9.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>ca</artifactId>
+	<artifactId>doinb</artifactId>
 	<version>1.0.0</version>
-	<name>ca</name>
-	<description>Demo project for Spring Boot</description>
+	<description>2019年互联网大厂高频重点面试题</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -24,46 +22,11 @@
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>cryptokit.jni</groupId>
-			<artifactId>cryptokit.jni</artifactId>
-			<version>1.0</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/cryptokit.jni-1.0.jar</systemPath>
-		</dependency>
-
-		<dependency>
-			<groupId>ra-tookit</groupId>
-			<artifactId>ra-tookit</artifactId>
-			<version>3.6.17</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/ra-toolkit-3.6.17.1.jar</systemPath>
-		</dependency>
-
-		<dependency>
-			<groupId>logback-cfca-jdk1.6</groupId>
-			<artifactId>logback-cfca-jdk1.6</artifactId>
-			<version>4.1.1.0</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/logback-cfca-jdk1.6-4.1.1.0.jar</systemPath>
-		</dependency>
-		<dependency>
-			<groupId>SADK</groupId>
-			<artifactId>SADK</artifactId>
-			<version>3.5.2.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/SADK-3.5.2.1.jar</systemPath>
-		</dependency>
-
+		<!--lombok插件-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.5.3</version>
 		</dependency>
 	</dependencies>
 
