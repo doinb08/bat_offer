@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.9.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>ca</artifactId>
+	<version>1.0.0</version>
+	<name>ca</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>cryptokit.jni</groupId>
+			<artifactId>cryptokit.jni</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/cryptokit.jni-1.0.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>ra-tookit</groupId>
+			<artifactId>ra-tookit</artifactId>
+			<version>3.6.17</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/ra-toolkit-3.6.17.1.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>logback-cfca-jdk1.6</groupId>
+			<artifactId>logback-cfca-jdk1.6</artifactId>
+			<version>4.1.1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/logback-cfca-jdk1.6-4.1.1.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>SADK</groupId>
+			<artifactId>SADK</artifactId>
+			<version>3.5.2.1</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/SADK-3.5.2.1.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.3</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
