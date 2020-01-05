@@ -7,7 +7,7 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.9.RELEASE</version>
 	</parent>
-	<groupId>com.example</groupId>
+	<groupId>com.interview</groupId>
 	<artifactId>doinb</artifactId>
 	<version>1.0.0</version>
 	<description>2019年互联网大厂高频重点面试题</description>
