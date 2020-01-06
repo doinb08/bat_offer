@@ -33,7 +33,7 @@ public class DirectBufferMemoryDemo {
         System.out.println(1 << 4);
         System.out.println(1 << 30);
 
-        //directBufferMemory();
+        directBufferMemory();
 /*        for (int i = 1; ; i++) {
             System.out.println("*********** i = " + i);
             new Thread(() ->{
