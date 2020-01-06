@@ -93,18 +93,7 @@ public class MyThreadPoolExecutorDemo {
      *
      * threadFactory：表示生成线程池中工作线程的线程工厂，用于创建线程一般默认的即可。
      *
-     * RejectedExecutionHandler：拒绝策略，表示当队列满了并且工作线程大于等于线程的最大线程数
-     *
-     * TODO bilibili.com/video/av68723403?p=50 底层原理待看
-     *
-     *
-     *
-     *
-     *
-     *
-     *
-     *
-     *
+     * RejectedExecutionHandler：拒绝策略，表示当队列满了并且工作线程大于等于线程的最大线程数。
      *
      */
 }
