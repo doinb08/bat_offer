@@ -7,12 +7,18 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 3.0版本-高并发版本 最有技术含量的生产者消费者Demo
+ *
+ * 多线程领域：所谓阻塞，在某些情况下会挂起线程(即阻塞)，一旦条件满足，被挂起的线程又自动被唤醒。
+ * 为什么需要 BlockingQueue
+ * 好处是我们不需要关心什么时候需要阻塞线程，什么时候需要唤醒线程，因为这一切 BlockingQueue 都一手包办好了。
+ *
+ * 在 concurrent 包发布以前，在多线程环境下，我们每个程序员都必须去自己控制这些细节，尤其还要兼顾效率和线程安全，而这会给我们的程序带来不小的复杂度。
  */
 class ShareResource3{
     private volatile boolean FLAG = true; // 默认开启，进行生产+消费 -- 高并发下的程序,需使用volatile关键字，确保可见性。
     private AtomicInteger atomicInteger = new AtomicInteger(); // initial value {@code 0}, 高并发下使用 i++将会造成错乱，使用原子类。
 
-    // 阻塞队列的接口都需要适配
+    // 阻塞队列的接口都需要适配 底层实现使用了 ReentrantLock，因此使用阻塞队列实现生产者消费者的时候，不需要额外的加锁。
     BlockingQueue<String> blockingQueue = null;
 
     /**

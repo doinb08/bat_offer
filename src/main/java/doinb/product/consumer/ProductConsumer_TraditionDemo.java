@@ -4,7 +4,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-class ShareData{
+class ShareData1 {
     private int number = 0;
     private Lock lock = new ReentrantLock();
     // 新版写法，类似于 Synchronized
@@ -68,7 +68,7 @@ class ShareData{
 }
 
 /**
- * @author doinb
+ * @author doinb 实现多线程 1.0版本
  * @desc java.util.concurrent并发包下的知识点，统筹总结。
  * 题目：一个初始值为零的变量，两个线程对其交替操作，一个加1一个减1，来5轮。-- 传统版的生产者消费者
  *
@@ -79,7 +79,7 @@ class ShareData{
  */
 public class ProductConsumer_TraditionDemo {
     public static void main(String[] args) {
-        ShareData shareData = new ShareData();
+        ShareData1 shareData = new ShareData1();
 
         // AAA线程做加法
         new Thread(()->{

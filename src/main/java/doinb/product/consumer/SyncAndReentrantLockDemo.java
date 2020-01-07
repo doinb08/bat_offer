@@ -5,7 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @author doinb    2.0版本
+ * @author doinb    实现多线程 2.0版本
  *        // synchronized属于可重入锁，保证正常退出，系统级别
  * 题目：synchronized和Lock有什么区别？用新的lock有什么好处？你举例说说。
  * 1：原始构成
@@ -35,7 +35,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *  0.资源类   1. 判断   2：干活  3：通知
  */
 
-class ShareResource{
+class ShareResource2 {
     private int number = 1; // A:1 B:2 C:3
     private Lock lock = new ReentrantLock();
     private Condition c1 = lock.newCondition();
@@ -92,7 +92,7 @@ public class SyncAndReentrantLockDemo {
 
     public static void main(String[] args) {
 
-        ShareResource shareResource = new ShareResource();
+        ShareResource2 shareResource = new ShareResource2();
 
         // AAA线程循环10次，每一次调用print 5次
         new Thread(()->{
