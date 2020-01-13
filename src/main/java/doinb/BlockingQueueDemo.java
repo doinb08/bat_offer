@@ -25,7 +25,7 @@ public class BlockingQueueDemo {
      * DelayQueue: 使用优先级队列实现的延迟无界阻塞队列。
      * ## SynchronousQueue: 不储存元素的阻塞队列，也即单个元素的队列。 --线程池底层使用
      * LinkedTransferQueue: 由链表结构组成的无界阻塞队列。
-     * LinkedBlockingDeque: 由链表结构组成的双向阻塞队列。
+     * LinkedBlockingQueue: 由链表结构组成的双向阻塞队列。
      *
      * BlockingQueue核心方法：
      *  抛出异常组：add(e), remove() element()
