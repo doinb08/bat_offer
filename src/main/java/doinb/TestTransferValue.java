@@ -43,7 +43,7 @@ public class TestTransferValue {
     }
 
     private void changeValueStr(String str){
-        str = "doinb";
+        str = "doinb";  // 此处等于new String("doinb")
     }
 
     public static void main(String[] args) {
