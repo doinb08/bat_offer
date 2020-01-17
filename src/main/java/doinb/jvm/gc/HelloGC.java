@@ -1,5 +1,6 @@
 package doinb.jvm.gc;
 
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -15,10 +16,12 @@ import java.util.concurrent.TimeUnit;
 public class HelloGC {
 
     /**
+     *  -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:PrintCommandLineFlags -XX:UseSerialGC
      *  配置GC收集器： -XX:+UseSerialGC
      * @param args
      */
     public static void main(String[] args) {
+        ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
         System.out.println("*************");
         try {
             TimeUnit.SECONDS.sleep(Integer.MAX_VALUE);
