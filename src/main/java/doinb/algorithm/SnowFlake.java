@@ -28,9 +28,9 @@ public class SnowFlake {
     /**
      * 每一部分的最大值
      */
-    private final static long MAX_DATACENTER_NUM = -1L ^ (-1L << DATACENTER_BIT);
-    private final static long MAX_MACHINE_NUM = -1L ^ (-1L << MACHINE_BIT);
-    private final static long MAX_SEQUENCE = -1L ^ (-1L << SEQUENCE_BIT);
+    private final static long MAX_DATACENTER_NUM = ~(-1L << DATACENTER_BIT);
+    private final static long MAX_MACHINE_NUM = ~(-1L << MACHINE_BIT);
+    private final static long MAX_SEQUENCE = ~(-1L << SEQUENCE_BIT);
 
     /**
      * 每一部分向左的位移
@@ -44,6 +44,8 @@ public class SnowFlake {
     private long sequence = 0L; //序列号
     private long lastStmp = -1L;//上一次时间戳
 
+    private SnowFlake() {}
+
     public SnowFlake(long datacenterId, long machineId) {
         if (datacenterId > MAX_DATACENTER_NUM || datacenterId < 0) {
             throw new IllegalArgumentException("datacenterId can't be greater than MAX_DATACENTER_NUM or less than 0");
@@ -53,8 +55,6 @@ public class SnowFlake {
         }
         this.datacenterId = datacenterId;
         this.machineId = machineId;
-        Integer.parseInt("");
-        Integer.valueOf("");
     }
 
     /**
@@ -62,7 +62,7 @@ public class SnowFlake {
      *
      * @return
      */
-    public synchronized long nextId() {
+    private synchronized long nextId() {
         long currStmp = getNewstmp();
         if (currStmp < lastStmp) {
             throw new RuntimeException("Clock moved backwards.  Refusing to generate id");
@@ -100,16 +100,30 @@ public class SnowFlake {
         return System.currentTimeMillis();
     }
 
+    /**
+     *
+     * @param datacenterId （分布式）（服务ID 1，2，3.....） 每个服务中写死
+     * @param machineId（用于集群） 机器ID 读取机器的环境变量MACHINEID 部署时每台服务器ID不一样
+     * @return long
+     */
+    public static long getSnowFlakeRandom(long datacenterId, long machineId) {
+        SnowFlake snowFlake = new SnowFlake(datacenterId, machineId);
+        return snowFlake.nextId();
+    }
+
+
     public static void main(String[] args) {
+        System.out.println(getSnowFlakeRandom(1, 1));
         //  datacenterId（分布式）（服务ID 1，2，3.....） 每个服务中写死
         //  machineId（用于集群） 机器ID 读取机器的环境变量MACHINEID 部署时每台服务器ID不一样
-        SnowFlake snowFlake = new SnowFlake(1, 1);
-        long start = System.currentTimeMillis();
-
-        for (int i = 0; i < 1000000; i++) {
-            System.out.println(snowFlake.nextId());
-        }
-        System.out.println("花费时间/毫秒：" + (System.currentTimeMillis() - start));
+//        SnowFlakeUtil snowFlake = new SnowFlakeUtil(1, 1);
+//        long start = System.currentTimeMillis();
+//        System.out.println(snowFlake.nextId());
+////        for (int i = 0; i < 1000000; i++) {
+////            System.out.println(snowFlake.nextId());
+////        }
+//        System.out.println("花费时间/毫秒：" + (System.currentTimeMillis() - start));
+        System.out.println(429769609680392192L - 429769856863309824L);
     }
 
 }

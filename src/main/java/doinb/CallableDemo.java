@@ -1,9 +1,6 @@
 package doinb;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.FutureTask;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 
 class MyCallableThread implements Callable<Integer>{
@@ -17,7 +14,7 @@ class MyCallableThread implements Callable<Integer>{
     public Integer call() throws Exception {
         System.out.println(Thread.currentThread().getName()+"线程**********come in Callable.");
         // 线程休眠一会儿
-        try { TimeUnit.SECONDS.sleep(3); } catch (InterruptedException e) { e.printStackTrace(); }
+        try { TimeUnit.SECONDS.sleep(10); } catch (InterruptedException e) { e.printStackTrace(); }
         System.out.println(Thread.currentThread().getName()+"线程**********invoked Callable.");
         return 1024;
     }
@@ -28,7 +25,7 @@ class MyCallableThread implements Callable<Integer>{
  *
  */
 public class CallableDemo {
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
+    public static void main(String[] args) throws ExecutionException, InterruptedException, TimeoutException {
         // 两个线程，一个main线程，一个是futureTask
         FutureTask<Integer> futureTaskA = new FutureTask<>(new MyCallableThread());
         FutureTask<Integer> futureTaskB = new FutureTask<>(new MyCallableThread());

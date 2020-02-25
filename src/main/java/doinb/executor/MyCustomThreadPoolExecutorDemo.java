@@ -102,5 +102,14 @@ public class MyCustomThreadPoolExecutorDemo {
      * CPU密集型的意思是该任务需要大量的运算，而没有阻塞，CPU一直全速运行。 CPU密集任务只有在真正的多核CPU上才可能得到加速。
      * CPU密集型任务配置尽可能少的线程数量：
      * 一般公式：CPU核数+1个线程的线程池
+     *
+     *
+     * 需要根据几个值来决定
+     * tasks ：每秒的任务数，假设为500~1000
+     * taskcost：每个任务花费时间，假设为0.1s
+     * responsetime：系统允许容忍的最大响应时间，假设为3s
+     * queueCapacity = (coreSizePool/taskcost)*responsetime
+     *  (2/0.1)*3 = 60
+     *
      */
 }
