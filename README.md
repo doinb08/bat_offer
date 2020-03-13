@@ -10,3 +10,7 @@
 1. jdk1.8_xx
 1. maven 3.6.x
 2. lombok插件
+
+java工具类库
+https://github.com/looly/hutool
+https://apidoc.gitee.com/loolly/hutool/

@@ -55,6 +55,13 @@
 			<artifactId>commons-codec</artifactId>
 			<version>1.11</version>
 		</dependency>
+
+        <!-- https://github.com/looly/hutool 工具包  -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.2.2</version>
+        </dependency>
 	</dependencies>
 
 	<build>
