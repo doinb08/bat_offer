@@ -14,3 +14,7 @@
 java工具类库
 https://github.com/looly/hutool
 https://apidoc.gitee.com/loolly/hutool/
+
+分库分表面试题：
+http://www.imooc.com/article/301836
+https://juejin.im/post/5e48a9af6fb9a07cc200c203
