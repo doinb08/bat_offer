@@ -1,15 +1,22 @@
 package doinb.algorithm;
 
+import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.lang.Snowflake;
+import cn.hutool.core.net.NetUtil;
+import cn.hutool.core.util.IdUtil;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 /**
  * Twitter的分布式自增ID雪花算法snowflake
- *
+ * <p>
  * Twitter的分布式雪花算法 SnowFlake 每秒自增生成26个万个可排序的ID
  * 1、twitter的SnowFlake生成ID能够按照时间有序生成
  * 2、SnowFlake算法生成id的结果是一个64bit大小的整数
  * 3、分布式系统内不会产生重复id（用有datacenterId和machineId来做区分）
  * datacenterId（分布式）（服务ID 1，2，3.....） 每个服务中写死
  * machineId（用于集群） 机器ID 读取机器的环境变量MACHINEID 部署时每台服务器ID不一样
- *
  **/
 public class SnowFlake {
 
@@ -44,7 +51,8 @@ public class SnowFlake {
     private long sequence = 0L; //序列号
     private long lastStmp = -1L;//上一次时间戳
 
-    private SnowFlake() {}
+    private SnowFlake() {
+    }
 
     public SnowFlake(long datacenterId, long machineId) {
         if (datacenterId > MAX_DATACENTER_NUM || datacenterId < 0) {
@@ -101,8 +109,7 @@ public class SnowFlake {
     }
 
     /**
-     *
-     * @param datacenterId （分布式）（服务ID 1，2，3.....） 每个服务中写死
+     * @param datacenterId    （分布式）（服务ID 1，2，3.....） 每个服务中写死 选值 0-31 个机房
      * @param machineId（用于集群） 机器ID 读取机器的环境变量MACHINEID 部署时每台服务器ID不一样
      * @return long
      */
@@ -113,17 +120,32 @@ public class SnowFlake {
 
 
     public static void main(String[] args) {
-        System.out.println(getSnowFlakeRandom(1, 1));
+
+        // 当前机器的 workerId
+        String ipv4 = NetUtil.getLocalhostStr();
+        System.out.println("ipv4:" + ipv4);
+        long workerId = NetUtil.ipv4ToLong(ipv4);
+        System.out.println("workerId:" + workerId);
+
+        // exception default value.
+        workerId = NetUtil.getLocalhostStr().hashCode();
+        System.out.println("default workerId:" + workerId);
+
+        Snowflake snowflake = IdUtil.getSnowflake(workerId, 1);
+        System.out.println(snowflake.nextId());
+
+/*
         //  datacenterId（分布式）（服务ID 1，2，3.....） 每个服务中写死
         //  machineId（用于集群） 机器ID 读取机器的环境变量MACHINEID 部署时每台服务器ID不一样
-//        SnowFlakeUtil snowFlake = new SnowFlakeUtil(1, 1);
-//        long start = System.currentTimeMillis();
-//        System.out.println(snowFlake.nextId());
-////        for (int i = 0; i < 1000000; i++) {
-////            System.out.println(snowFlake.nextId());
-////        }
-//        System.out.println("花费时间/毫秒：" + (System.currentTimeMillis() - start));
-        System.out.println(429769609680392192L - 429769856863309824L);
+
+        // System.out.println(getSnowFlakeRandom(1,1));
+        // hutool 工具包带分布式id生成
+        Snowflake snowflake = IdUtil.createSnowflake(1, 1);
+        for (int i = 0; i < 1; i++) {
+            System.out.println(IdUtil.getSnowflake(1, 1).nextId());
+            System.out.println(IdUtil.getSnowflake(1, 1).nextIdStr());
+        }
+*/
     }
 
 }
