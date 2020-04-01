@@ -1,5 +1,5 @@
-# BAT_Offer
-2019年互联网大厂高频重点面试题Demo
+# BAT_OFFER
+2019-2020年互联网大厂高频重点面试题
 
 资料来自于B站，【真全栈程序员】 公开的视频学习资料。
 视频地址：https://www.bilibili.com/video/av68723403
