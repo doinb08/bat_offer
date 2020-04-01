@@ -1,0 +1,26 @@
+OOM异常类型有那些？ 必考题
+
+java.lang.StackOverflowError
+java.lang.OutOfMemoryError:Java heap space
+java.lang.OutOfMemoryError:GC overhead limit exceeded
+java.lang.OutOfMemoryError:Direct buffer memory
+java.lang.OutOfMemoryError:unable to create new native thread
+java.lang.OutOfMemoryError:Metaspace
+
+
+4种主要垃圾收集器
+
+Serial    串行回收      它为单线程环境设计只使用一个线程进行垃圾回收，会暂停所有用户线程。不适合服务器环境。
+
+Parallel  并行回收      多个垃圾收集线程并行工作，此时用户线程是暂停的，适用于科学计算/大数据处理首台等弱交互场景。
+
+CMS       并发标记清除  用户线程和垃圾收集线程同时执行(不一定是并行，可能交替执行)，不需要停顿用户线程，互联网公司多用它，适用于对响应时间有要求的场景。
+
+G1        G1            
+
+
+思想：
+引用计数
+复制拷贝
+标记清除
+标记整理
