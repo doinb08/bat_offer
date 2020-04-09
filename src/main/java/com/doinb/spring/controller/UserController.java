@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController {
-    /*
     @Autowired
     UserService userService;
 
@@ -16,5 +15,4 @@ public class UserController {
     public Object login(@RequestParam String username) {
         return userService.login(username);
     }
-    */
 }

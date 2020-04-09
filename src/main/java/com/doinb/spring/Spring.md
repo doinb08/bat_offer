@@ -1,14 +1,26 @@
-## spring AOP源码解读
-### Spring常见面试资料：
-> https://juejin.im/post/5e6d993cf265da575b1bd4af
-> https://blog.csdn.net/a745233700/article/details/80959716
+# spring AOP源码解读
+[IoC官网](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/core.html)  
+[Spring Github源码地址](https://github.com/spring-projects/spring-framework.git)  
+如果你想加入 Spring 源码的学习，笔者的建议是从 spring-core 入手，其次是 spring-beans 和 spring-aop，  
+随后是spring-context，再其次是 spring-tx 和 spring-orm，最后是 spring-web 和其他部分。
 
-### SpringMVC常见面试题总结
-> https://blog.csdn.net/a745233700/article/details/80963758
+## Spring常见面试资料：
+> https://juejin.im/post/5e6d993cf265da575b1bd4af  
+> https://blog.csdn.net/a745233700/article/details/80959716  
 
-### Mybatis常见面试题总结
-> https://blog.csdn.net/a745233700/article/details/80977133
+## SpringMVC常见面试题总结
+> https://blog.csdn.net/a745233700/article/details/80963758  
 
+## Mybatis常见面试题总结
+> https://blog.csdn.net/a745233700/article/details/80977133  
+
+## 为什么我们要用Spring呢？
+> 1. 从spring ioc角度回答：统一负责对象的创建，管理生命周期，自动维护对象依赖关系（也就是依赖注入DI）。
+    依赖查找： byType byName
+    依赖注入：a.构造器传参 b.方法传参 c.属性 反射 field.set(x)
+    spring使用：
+    bean交给spring管理
+> 2. 从spring aop角度回答见下方： 什么是Spring AOP？
 
 ### 什么是Spring AOP？
 与OOP(Object Oriented Programming面向对象)对比，传统的OOP开发中的代码逻辑是自上而下
@@ -25,7 +37,7 @@ AOP的编程思想就是把这些散落横切性的问题和主业务逻辑进�
 抛出增强
 引入增强
 
-BeanPostProcessor后置处理器
+BeanPostProcessor 后置处理器
 
 底层AOP实现
 DefaultAopProxyFactory createAopProxy()方法：
