@@ -45,3 +45,30 @@ mysql一次磁盘IO能查询多少数据出来？
 show global status like 'innodb_page_size'   查询到：16kb
 
 联合索引的底层数据结构长什么样子？
+
+
+## 分布式ID
+
+
+[分布式ID详解](https://mp.weixin.qq.com/s/8CGN6aeMy9UuI58ZWlUGEg)
+
+* 百度（uid-generator）
+uid-generator是由百度技术部开发，项目GitHub地址 https://github.com/baidu/uid-generator  
+uid-generator是基于Snowflake算法实现的，与原始的snowflake算法不同在于，uid-generator支持自定义时间戳、工作机器ID和 序列号 等各部分的位数，而且uid-generator中采用用户自定义workId的生成策略。  
+uid-generator需要与数据库配合使用，需要新增一个WORKER_NODE表。当应用启动时会向数据库表中去插入一条数据，插入成功后返回的自增ID就是该机器的workId数据由host，port组成。  
+对于uid-generator ID组成结构：workId，占用了22个bit位，时间占用了28个bit位，序列化占用了13个bit位，需要注意的是，和原始的snowflake不太一样，时间的单位是秒，而不是毫秒，workId也不一样，而且同一应用每次重启就会消费一个workId。  
+
+* 美团（Leaf）
+Leaf由美团开发，github地址：https://github.com/Meituan-Dianping/Leaf  
+Leaf同时支持号段模式和snowflake算法模式，可以切换使用。  
+
+* 号段模式
+先导入源码 https://github.com/Meituan-Dianping/Leaf ，在建一张表leaf_alloc
+
+* snowflake模式
+snowflake模式获取分布式自增ID的测试url：http://localhost:8080/api/snowflake/get/test
+
+* 滴滴（Tinyid）
+Tinyid由滴滴开发，Github地址：https://github.com/didi/tinyid  
+Tinyid是基于号段模式原理实现的与Leaf如出一辙，每个服务获取一个号段（1000,2000]、（2000,3000]、（3000,4000]
+Tinyid提供http和tinyid-client两种方式接入具体查看文档实现。

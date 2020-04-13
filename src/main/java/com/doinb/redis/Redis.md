@@ -3,7 +3,7 @@
 https://www.jianshu.com/p/0712771984e0  
 https://www.jianshu.com/p/6264fa82ac33   
 
-![image](redis.png)
+![redis线程模型](images/redis.png)
 
 ## Redis是什么
 Redis是C语言开发的一个开源的（遵从BSD协议）高性能键值对（key-value）的内存数据库，可以用作数据库、缓存、消息中间件等。
@@ -124,9 +124,9 @@ beforeInvocation：是否在方法执行前就清空，缺省为false，如果�
 Redis4.0加入了LFU(least frequency use)淘汰策略，包括volatile-lfu和allkeys-lfu，通过统计访问频率，将访问频率最少，即最不经常使用的KV淘汰。
 
 ## Redis持久化
-Redis的持久化策略有两种：
-1、RDB：快照形式是直接把内存中的数据保存到一个dump的文件中，定时保存，保存策略。
-2、AOF：把所有的对Redis的服务器进行修改的命令都存到一个文件里，命令的集合。Redis默认是快照RDB的持久化方式。
+Redis的持久化策略有两种：  
+1、RDB：快照形式是直接把内存中的数据保存到一个dump的文件中，定时保存，保存策略。  
+2、AOF：把所有的对Redis的服务器进行修改的命令都存到一个文件里，命令的集合。Redis默认是快照RDB的持久化方式。  
 当Redis重启的时候，它会优先使用AOF文件来还原数据集，因为AOF文件保存的数据集通常比RDB文件所保存的数据集更完整。你甚至可以关闭持久化功能，让数据只在服务器运行时存。
 
 ## Redis持久化RDB
@@ -165,7 +165,9 @@ AOF可以做到全程持久化，只需要在配置中开启 appendonly yes。�
 
 ## 解决主从复制的主流方案
 * 使用哨兵模式  
-![Image](sentinel.png)  
+
+![哨兵模式](images/sentinel.png)
+
 Redis Sentinel（哨兵）主要功能包括主节点存活检测、主从运行情况检测、自动故障转移、主从切换。Redis Sentinel最小配置是一主一从。  
 Redis的Sentinel系统可以用来管理多个Redis服务器，该系统可以执行以下四个任务：  
 1、监控：不断检查主服务器和从服务器是否正常运行。  

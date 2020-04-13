@@ -212,7 +212,7 @@ Spring中的Bean从创建到销毁大概会经过这些：
 11. 如果有和加载这个 Bean的 Spring 容器相关的 BeanPostProcessor 对象，执行postProcessAfterInitialization() 方法。  
 12. 当要销毁Bean的时候，如果 Bean 实现了 DisposableBean 接口，执行 destroy() 方法。  
 13. 当要销毁 Bean 的时候，如果 Bean 在配置文件中的定义包含 destroy-method 属性，执行指定的方法。  
-[流程图见转载链接](https://mp.weixin.qq.com/s?__biz=Mzg2MjEwMjI1Mg==&mid=2247492650&idx=1&sn=1f1fcba0db35b3803f7af4cffa90015a&chksm=ce0e53a9f979dabf9f42435d6ab47cc02b3e94c0c5d310f8c269159d42dc3ea4fb460add8573&mpshare=1&scene=1&srcid=&sharer_sharetime=1586696379661&sharer_shareid=d023c1ba65577277011913eb22c1166d&key=2be5a50c0e9f27d54b5e9ab8a26a0c4b5567a71eb3a3ab232be439ff5725225f553188945f3c548a449b81aba34c541d5bb98b4ebc20bf0871f94d3b38462bf9d51d9873660ec3e81a8f2ad975b517f9&ascene=1&uin=MTY0MDU0NzU4MQ%3D%3D&devicetype=Windows+7&version=62080079&lang=zh_CN&exportkey=AyV0JN%2BhlP%2BFhWpX9%2Bv2P8o%3D&pass_ticket=9fGATeUg1WFD0O2KHsj9q%2FO7Cx72GPaNn1IEOFVn0YHx2A8Ragq1qYWRYOO5CQgR)
+![images](images/springfilecyc.png)
 
 ## 面试官:将一个类声明为Spring的Bean的注解有哪些你知道吗？
 一般用@Autowried注解自动装配Bean，要想把类识别为可用于自动装配的Bean，采用以下注解可以实现：  
