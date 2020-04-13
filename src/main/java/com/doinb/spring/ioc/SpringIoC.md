@@ -44,5 +44,21 @@ FactoryBean 只是一个可以在 IOC 而容器中被管理的一个 Bean,是对
  产生出来的对象。
 
 ## 3. Spring提供了几种方式管理bean的生命周期? 有什么区别?
-
+>Spring Bean 的生命周期简单易懂。在一个 bean 实例被初始化时，需要执行一系列的初始化操作以达到可用的状  
+ 态。同样的，当一个 bean 不在被调用时需要进行相关的析构操作，并从 bean 容器中移除。Spring bean factory  
+ 负责管理在 spring 容器中被创建的 bean 的生命周期。Bean 的生命周期由两组回调（call back）方法组成。  
+ 1.初始化之后调用的回调方法。  
+ 2.销毁之前调用的回调方法。  
+Spring 框架提供了以下四种方式来管理 bean 的生命周期事件：  
+1、InitializingBean 和 DisposableBean 回调接口  
+2、针对特殊行为的其他 Aware 接口  
+3、Bean 配置文件中的 Custom init()方法和 destroy()方法  
+4、@PostConstruct 和@PreDestroy 注解方式  
+使用 customInit()和 customDestroy()方法管理 bean 生命周期的代码样例如下：   
+ `` <beans>
+        <bean id="demoBean" class="com.doinb.vo.DemoBean" init-Method="customInit"   
+            destroy-Method="customDestroy" >
+        </bean>
+    </beans>
+ ``
 
