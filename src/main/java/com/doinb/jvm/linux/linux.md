@@ -17,3 +17,14 @@
     4 将需要的线程ID转换为16进制格式（英文小写格式） printf "%x\n" 有问题的线程ID
     5 jstack 进程ID| grep tid(16进制线程ID小写英文) -A60
 
+    监控java线程数：
+    ps -eLf | grep java | wc -l
+    
+    监控网络客户连接数：
+    netstat -n | grep tcp | grep 侦听端口 | wc -l
+ 
+三. linux查看目录占用空间大小
+
+    du -sh /目录
+    
+    du -sh *
