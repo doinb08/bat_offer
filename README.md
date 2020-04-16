@@ -25,6 +25,7 @@ JUC专题视频学习资料视频地址：
 >  1. jdk1.8_xx
 >  2. maven 3.6.x
 >  3. lombok插件
+>  4. 启动DoApplication可访问简易版springboot工程, 使用AOP则启动DoAopApplication。
 
 java工具类库
 https://github.com/looly/hutool

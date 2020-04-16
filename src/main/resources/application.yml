@@ -6,3 +6,5 @@ server:
 spring:
   application:
     name: doinb-demo-service
+  profiles:
+    active: dev
