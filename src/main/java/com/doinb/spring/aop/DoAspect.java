@@ -1,9 +1,16 @@
 package com.doinb.spring.aop;
 
+import com.doinb.utils.IpRegionUtils;
+import com.doinb.utils.ReactiveWebUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestAttributes;
+import org.springframework.web.context.request.RequestContextHolder;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Aspect
 @Component //让spring进行管理
@@ -11,10 +18,16 @@ import org.springframework.stereotype.Component;
 public class DoAspect {
     /**
      * 思考： 为什么这些切面会执行？
-     *
      */
 
+    @Autowired
+    IpRegionUtils ipRegionUtils;
+
     @Pointcut("execution(* com.doinb.spring.service.*.*(..))") // service包下的 所有接口，所有方法
+    public void servicePointcut() {
+    }
+
+    @Pointcut("execution(* com.doinb.spring..*.*(..))") // com.doinb.spring 包下的所有方法
     public void pointcut() {
     }
 
@@ -28,7 +41,11 @@ public class DoAspect {
             throwable.printStackTrace();
         }
         long end = System.currentTimeMillis();
-        log.info("【AOP环绕增强】执行消耗时间：" + (end - current));
+        log.info("【AOP环绕增强】执行消耗时间：{}", (end - current));
+        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = (HttpServletRequest) requestAttributes.resolveReference(RequestAttributes.REFERENCE_REQUEST);
+        String ip = ReactiveWebUtils.getRemoteAddress(request);
+        log.info("【AOP环绕增强】区域：{}", ipRegionUtils.getRegion(ip));
         return proceed;
     }
 

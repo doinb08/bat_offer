@@ -1,0 +1,6 @@
+server:
+  port: 2020
+  servlet:
+    context-path: /
+
+## configuration by dev

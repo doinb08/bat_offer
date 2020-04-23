@@ -4,7 +4,7 @@ import java.nio.ByteBuffer;
 
 /**
  * 配置参数
- * -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:MaxDirectMemorySize=5m
+ * -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:MaxDirectMemorySize=5m -XX:+HeapDumpOnOutOfMemoryError
  *
  * 故障现象：
  * Exception in thread "main" java.lang.OutOfMemoryError: Direct buffer memory
@@ -64,7 +64,7 @@ public class DirectBufferMemoryDemo {
 
     private static void directBufferMemory() {
         // -Xms10m -Xmx10m
-        // byte[] bytes = new byte[80 * 1024 * 1024]; //80MB Java heap space
+         byte[] bytes = new byte[80 * 1024 * 1024]; //80MB Java heap space
 
         System.out.println("MaxDirectMemory:" + (sun.misc.VM.maxDirectMemory()/(double)1024/1024) + "MB");
         System.out.println("availableProcessors:" + Runtime.getRuntime().availableProcessors());

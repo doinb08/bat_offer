@@ -17,3 +17,31 @@
     4 将需要的线程ID转换为16进制格式（英文小写格式） printf "%x\n" 有问题的线程ID
     5 jstack 进程ID| grep tid(16进制线程ID小写英文) -A60
 
+    监控java线程数：
+    ps -eLf | grep java | wc -l
+    
+    监控网络客户连接数：
+    netstat -n | grep tcp | grep 侦听端口 | wc -l
+ 
+三. linux查看目录占用空间大小
+
+    du -sh /目录
+    
+    du -sh *
+    
+    查看虚拟机内核参数
+    cat /proc/version 或者 cat /etc/issue 或者 uname -a
+    
+    查看cpu信息
+    
+    # 总核数 = 物理CPU个数 X 每颗物理CPU的核数 
+    # 总逻辑CPU数 = 物理CPU个数 X 每颗物理CPU的核数 X 超线程数
+    
+    # 查看物理CPU个数
+    cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
+    
+    # 查看每个物理CPU中core的个数(即核数)
+    cat /proc/cpuinfo| grep "cpu cores"| uniq
+    
+    # 查看逻辑CPU的个数
+    cat /proc/cpuinfo| grep "processor"| wc -l
