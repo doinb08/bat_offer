@@ -140,14 +140,14 @@ public void testHelloWorld() {
 
 ## 面试官：那你知道BeanFactory和ApplicationContext的区别吗？
 1. BeanFactory是Spring中最基础的接口。  
-它负责读取读取bean配置文档，管理bean的加载，实例化，维护bean之间的依赖关系，负责bean的生命周期。  
+它负责读取bean配置文档，管理bean的加载，实例化，维护bean之间的依赖关系，负责bean的生命周期。  
 2. ApplicationContext是BeanFactory的子接口，除了提供上述BeanFactory的所有功能外，还提供了更完整的框架功能：如国际化支持，资源访问，事件传递等。  
 常用的获取ApplicationContext的方法：  
     2.1 FileSystemXmlApplicationContext：  从文件系统或者url指定的xml配置文件创建，参数为配置文件名或者文件名数组。  
-    2.2 ClassPathXmlApplicationContext：从classpath的xml配置文件创建，可以从jar包中读取配置文件 2.3 WebApplicationContextUtils：  
-    从web应用的根目录读取配置文件，需要先在web.xml中配置，可以配置监听器或者servlet来实现。  
+    2.2 ClassPathXmlApplicationContext：从classpath的xml配置文件创建，可以从jar包中读取配置文件   
+    2.3 WebApplicationContextUtils：  从web应用的根目录读取配置文件，需要先在web.xml中配置，可以配置监听器或者servlet来实现。    
 
- ApplicationContext的初始化和BeanFactory有一个重大区别：  
+* ApplicationContext的初始化和BeanFactory有一个重大区别：  
 BeanFactory在初始化容器时，并未实例化Bean，知道第一次访问某个Bean时才实例化Bean；    
 而ApplicationContext则在初始化应用上下文时就实例化所有的单例Bean，因此ApplicationContext的初始化时间会比BeanFactory稍长一些。
 
@@ -229,6 +229,6 @@ Spring中的Bean从创建到销毁大概会经过这些：
 @Bean注解通常是在标有该注解的方法中定义产生这个bean，@Bean告诉Spring这是某个类的实例，当我需要用它的时候还给我。  
 3. @Bean注解比@Component注解的自定义性更强，而且很多地方只能通过@Bean注解来注册Bean，比如第三方库中的类。  
 
-## [文字转载链接](https://mp.weixin.qq.com/s?__biz=Mzg2MjEwMjI1Mg==&mid=2247492650&idx=1&sn=1f1fcba0db35b3803f7af4cffa90015a&chksm=ce0e53a9f979dabf9f42435d6ab47cc02b3e94c0c5d310f8c269159d42dc3ea4fb460add8573&mpshare=1&scene=1&srcid=&sharer_sharetime=1586696379661&sharer_shareid=d023c1ba65577277011913eb22c1166d&key=2be5a50c0e9f27d54b5e9ab8a26a0c4b5567a71eb3a3ab232be439ff5725225f553188945f3c548a449b81aba34c541d5bb98b4ebc20bf0871f94d3b38462bf9d51d9873660ec3e81a8f2ad975b517f9&ascene=1&uin=MTY0MDU0NzU4MQ%3D%3D&devicetype=Windows+7&version=62080079&lang=zh_CN&exportkey=AyV0JN%2BhlP%2BFhWpX9%2Bv2P8o%3D&pass_ticket=9fGATeUg1WFD0O2KHsj9q%2FO7Cx72GPaNn1IEOFVn0YHx2A8Ragq1qYWRYOO5CQgR)
+## [原文章转载于](https://mp.weixin.qq.com/s?__biz=Mzg2MjEwMjI1Mg==&mid=2247492650&idx=1&sn=1f1fcba0db35b3803f7af4cffa90015a&chksm=ce0e53a9f979dabf9f42435d6ab47cc02b3e94c0c5d310f8c269159d42dc3ea4fb460add8573&mpshare=1&scene=1&srcid=&sharer_sharetime=1586696379661&sharer_shareid=d023c1ba65577277011913eb22c1166d&key=2be5a50c0e9f27d54b5e9ab8a26a0c4b5567a71eb3a3ab232be439ff5725225f553188945f3c548a449b81aba34c541d5bb98b4ebc20bf0871f94d3b38462bf9d51d9873660ec3e81a8f2ad975b517f9&ascene=1&uin=MTY0MDU0NzU4MQ%3D%3D&devicetype=Windows+7&version=62080079&lang=zh_CN&exportkey=AyV0JN%2BhlP%2BFhWpX9%2Bv2P8o%3D&pass_ticket=9fGATeUg1WFD0O2KHsj9q%2FO7Cx72GPaNn1IEOFVn0YHx2A8Ragq1qYWRYOO5CQgR)
 
 

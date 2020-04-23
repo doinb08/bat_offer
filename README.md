@@ -43,5 +43,29 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 ## 分布式事务解决方案
 [SpringCloudAlibabaSeata官网](https://seata.io/zh-cn)    
 
-[面试技巧1](https://mp.weixin.qq.com/s/_LIPtYukiysDnsLc1erBhw)  
-[面试技巧2](https://www.cnblogs.com/JavaArchitect/p/12298114.html)
+## 网络原理
+[面试 HTTP ，99% 的面试官都爱问这些问题](https://mp.weixin.qq.com/s/F_wrb6g1jnC_g903EHlS-w)
+
+## Netty网络应用框架
+[Netty官网](https://netty.io)     
+[视频学习Netty](https://www.bilibili.com/video/BV17t41137su?p=2)  
+
+## 面试专场
+[面试技巧1](https://mp.weixin.qq.com/s/_LIPtYukiysDnsLc1erBhw)    
+[面试技巧2](https://www.cnblogs.com/JavaArchitect/p/12298114.html)    
+[Redis面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486246&idx=1&sn=c9c670ce5d4e17d156bcc9e309efde98&chksm=f94a8acfce3d03d97a6dce52a86d9898dcfd8c25309e6121fa4b2aa6a9c4c8079c29e4099a70&scene=21#wechat_redirect)  
+[Spring Boot面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486357&idx=1&sn=126e2f979906e823aad46c93d310d820&chksm=f94a8a7cce3d036af7e805eab62bc323581a02c13e4ed8a87b91b1324f3791fc08a0e81fd312&scene=21#wechat_redirect)  
+[Tomcat面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486250&idx=1&sn=7de9aebd26dd06b5e27390f8cd5652b9&chksm=f94a8ac3ce3d03d5759d865d84052b675f9360b11369d4f44e63e815b6160e6d2ccd279464f0&scene=21#wechat_redirect)  
+[Java虚拟机(JVM)面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486273&idx=1&sn=3bc11083a43590fa3cc3d1ad8361cbfc&chksm=f94a8aa8ce3d03be8b3454f1f06ebe505d829c0845b6bc25a8a98ae544e2696a1986372ea06d&scene=21#wechat_redirect)  
+[Spring Cloud面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486233&idx=1&sn=f1b4fa8bc476e44ee86827157c32120c&chksm=f94a8af0ce3d03e689ed25cc7cb55aa2ba0cc7bcfb2bcd148fa347c5849744842cf344d2f89c&scene=21#wechat_redirect)  
+[MySQL数据库面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486347&idx=1&sn=dcf2ac7b71f984abac1d0e717b82b1e5&chksm=f94a8a62ce3d03741fcdb61d3c62bf5f80911e8de6faf2ab1efcb2d7c6ddd64dbde65cdced88&scene=21#wechat_redirect)  
+[消息中间件MQ与RabbitMQ面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486238&idx=1&sn=36f69624d21ffa6ef4815faabafbe9af&chksm=f94a8af7ce3d03e1bf469aaf880e0dc55a5b4989657efc0b13fd9533875bd29ccbfdff703eec&scene=21#wechat_redirect)   
+[Java并发编程面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486353&idx=1&sn=5513d8c3e2821d35c553ab7c545102e4&chksm=f94a8a78ce3d036e2669429eb1c76e14db63a60d9f8179cde57d1d7690e903325f30a212b18b&scene=21#wechat_redirect)   
+[Netty面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486254&idx=1&sn=83de4bdf603c7d68a861914b1e42ca54&chksm=f94a8ac7ce3d03d11f1009268875b6f93120e07ec18be97eb4ed64dd45a355c77541c0dd0223&scene=21#wechat_redirect)   
+[Zookeeper超详细的面试题](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486207&idx=1&sn=7cf36dabd34c38db80b10f3b2682bb12&chksm=f94a8b16ce3d0200a8c10666b1f4ef05db230f7860087a24170b168f2c0960cb078b8744d574&scene=21#wechat_redirect)   
+[Java经典面试题整理及答案详解（一）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486222&idx=1&sn=fede2c994146afc17314df8e9699ee98&chksm=f94a8ae7ce3d03f1faecafa0a6d5b481997a29a91496bd8ca54fa9afd88f5c7117636ac506a6&scene=21#wechat_redirect)  
+[面试官问：为什么需要消息队列？使用消息队列有什么好处？](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486211&idx=1&sn=28b470281c083d7453f08b1c3377b83f&chksm=f94a8aeace3d03fcf3ffefa2eca67ff4b4f9cd426b7b4ba547c03863b7b0712e1f20896abfd0&scene=21#wechat_redirect)  
+[Spring MVC 面经](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486171&idx=1&sn=57c3feef86b0c7d5d049032c82eb2ed5&chksm=f94a8b32ce3d02248d797fa781fab04a8baa4d881415bfd88088f650cdb7b24204142ccf0154&scene=21#wechat_redirect)   
+[Spring经典面试题总结](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486096&idx=1&sn=8a471403c996fb61b05bd631970d2e1b&chksm=f94a8b79ce3d026f881d382996db1a6875c1b6895dd12129c9091e690612c14611a56e69518b&scene=21#wechat_redirect)   
+[史上最全多线程面试题 ！](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486083&idx=1&sn=b431e6e522fe202279b24ae80ddfdcff&chksm=f94a8b6ace3d027c5a5b21c7bce84ef879307f0e30f4b6398a3936b2e64f48fd569ed17b05ff&scene=21#wechat_redirect)  
+
