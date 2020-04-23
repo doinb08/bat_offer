@@ -7,20 +7,18 @@
 
 
 ###思想：
-引用计数
-复制拷贝
-标记清除
-标记整理
-
-
+引用计数  
+复制拷贝  
+标记清除  
+标记整理   
 * 输入命令: 查看默认垃圾收集器
 > java -XX:+PrintCommandLineFlags -version
 
 ### 落地实现：
-串行回收：   -XX:+UseSerialGC
-并行回收：   -XX:+UseParallelGC
-并发回收：   -XX:+UseConcMarkSweepGC
-G1：        -XX:+UseG1GC
+串行回收：   -XX:+UseSerialGC  
+并行回收：   -XX:+UseParallelGC  
+并发回收：   -XX:+UseConcMarkSweepGC  
+G1：        -XX:+UseG1GC  
 
 
 ### 参数说明：
