@@ -1,5 +1,5 @@
 # BAT_OFFER
-2019-2020年互联网大厂高频重点面试题
+2019-2020年互联网公司高频重点面试题
 
 ## 想要成为一名出色的程序员首先要具备如下能力
 > 1. Java基础扎实、掌握JVM原理、多线程、网络原理、设计模式、常用数据结构和算法。
@@ -25,11 +25,11 @@
 >  4. 启动DoApplication可访问简易版springboot工程, 使用AOP则启动DoAopApplication。
 
 ## java工具类库-提升编码效率
-https://github.com/looly/hutool  
+>https://github.com/looly/hutool  
 https://apidoc.gitee.com/loolly/hutool/
 
 ## 分库分表面试题
-http://www.imooc.com/article/301836  
+>http://www.imooc.com/article/301836  
 https://juejin.im/post/5e48a9af6fb9a07cc200c203
 
 ## Spring Boot、Spring MVC 和 Spring 有什么区别？
@@ -41,17 +41,17 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 * Spring Boot 通过一个自动配置和启动的项来目解决这个问题。为了更快的构建产品就绪应用程序，Spring Boot 提供了一些非功能性特征。
 
 ## 分布式事务解决方案
-[SpringCloudAlibabaSeata官网](https://seata.io/zh-cn)    
+>[SpringCloudAlibabaSeata官网](https://seata.io/zh-cn)    
 
 ## 网络原理
-[面试 HTTP ，99% 的面试官都爱问这些问题](https://mp.weixin.qq.com/s/F_wrb6g1jnC_g903EHlS-w)
+>[面试 HTTP ，99% 的面试官都爱问这些问题](https://mp.weixin.qq.com/s/F_wrb6g1jnC_g903EHlS-w)
 
 ## Netty网络应用框架
-[Netty官网](https://netty.io)     
-[视频学习Netty](https://www.bilibili.com/video/BV17t41137su?p=2)  
+>[Netty官网](https://netty.io)     
+>[视频学习Netty](https://www.bilibili.com/video/BV17t41137su?p=2)  
 
 ## 面试专场
-[面试技巧1](https://mp.weixin.qq.com/s/_LIPtYukiysDnsLc1erBhw)    
+>[面试技巧1](https://mp.weixin.qq.com/s/_LIPtYukiysDnsLc1erBhw)    
 [面试技巧2](https://www.cnblogs.com/JavaArchitect/p/12298114.html)    
 [Redis面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486246&idx=1&sn=c9c670ce5d4e17d156bcc9e309efde98&chksm=f94a8acfce3d03d97a6dce52a86d9898dcfd8c25309e6121fa4b2aa6a9c4c8079c29e4099a70&scene=21#wechat_redirect)  
 [Spring Boot面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486357&idx=1&sn=126e2f979906e823aad46c93d310d820&chksm=f94a8a7cce3d036af7e805eab62bc323581a02c13e4ed8a87b91b1324f3791fc08a0e81fd312&scene=21#wechat_redirect)  
