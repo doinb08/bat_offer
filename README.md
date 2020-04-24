@@ -25,11 +25,11 @@
 >  4. 启动DoApplication可访问简易版springboot工程, 使用AOP则启动DoAopApplication。
 
 ## java工具类库-提升编码效率
-https://github.com/looly/hutool
+https://github.com/looly/hutool  
 https://apidoc.gitee.com/loolly/hutool/
 
 ## 分库分表面试题
-http://www.imooc.com/article/301836
+http://www.imooc.com/article/301836  
 https://juejin.im/post/5e48a9af6fb9a07cc200c203
 
 ## Spring Boot、Spring MVC 和 Spring 有什么区别？
@@ -69,3 +69,15 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 [Spring经典面试题总结](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486096&idx=1&sn=8a471403c996fb61b05bd631970d2e1b&chksm=f94a8b79ce3d026f881d382996db1a6875c1b6895dd12129c9091e690612c14611a56e69518b&scene=21#wechat_redirect)   
 [史上最全多线程面试题 ！](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486083&idx=1&sn=b431e6e522fe202279b24ae80ddfdcff&chksm=f94a8b6ace3d027c5a5b21c7bce84ef879307f0e30f4b6398a3936b2e64f48fd569ed17b05ff&scene=21#wechat_redirect)  
 
+## 2020/4/24 数字海南 电话面
+MQ消息丢失问题说一下？  
+MQ消息重复消费如何处理？  
+JVM内存结构介绍一下？  
+说说G1工作原因？  
+JDK11的ZGC工作原理？  
+说说线程池的底层原理？  
+线程池的参数如何设置？  
+springboot和springmvc的区别？  
+springboot除了有自带的Tomcat，你还知道其他容器吗？  
+springboot是如何区分环境的（dev、prod环境区分 ConfigFileApplicationListener 类）？  
+maven有使用过吗？说说maven是如何区分环境打包的？  
