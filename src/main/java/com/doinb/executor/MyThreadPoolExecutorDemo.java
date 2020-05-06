@@ -26,10 +26,12 @@ public class MyThreadPoolExecutorDemo {
          ExecutorService threadPool = Executors.newFixedThreadPool(20);
 
         // 单个线程 （一池一线程）
-        //ExecutorService threadPool = Executors.newSingleThreadExecutor();
+        ExecutorService threadPool2 = Executors.newSingleThreadExecutor();
 
-        // 可扩容，带缓存的池子。（一池多线程）
-        //ExecutorService threadPool = Executors.newCachedThreadPool();
+        // 可扩容，带缓存的池子。（一池多线程） 缺点：初始化maximumPoolSize为Integer.MAX_VALUE
+        ExecutorService threadPool3 = Executors.newCachedThreadPool();
+
+        ExecutorService threadPool4 = Executors.newScheduledThreadPool(10);
 
 
         try{

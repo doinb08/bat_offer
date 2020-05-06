@@ -1,6 +1,8 @@
 package com.doinb.jvm.oom;
 
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * 配置参数
