@@ -1,5 +1,6 @@
 package com.doinb.spring;
 
+import com.doinb.spring.service.UserService;
 import com.doinb.spring.service.UserServiceImpl;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -60,9 +61,11 @@ public class DoAopAspectApplication {
 
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(DoAopAspectApplication.class);
 
-//        UserService userService = annotationConfigApplicationContext.getBean(UserService.class);
+        //  通过jdk动态代理实现
+        UserService userService = annotationConfigApplicationContext.getBean(UserService.class);
 
-        UserServiceImpl userService = (UserServiceImpl) annotationConfigApplicationContext.getBean("userService");
+        // 通过Cglib动态代理实现
+// UserServiceImpl userService = (UserServiceImpl) annotationConfigApplicationContext.getBean("userService");
 
         Object result = userService.login("admin");
         System.out.println(result);

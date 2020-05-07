@@ -27,7 +27,6 @@ public class MyHashMap {
         newNode.key = key;
         newNode.value = value;
         newNode.next = null;
-
         Node tmp = table[newNode.hash];
 
         // 正在遍历的最后一个元素
@@ -54,7 +53,7 @@ public class MyHashMap {
                 }
             }
             // 没有发生key重复的情况，则添加到链表最后.
-            if (!keyRepeat){
+            if (!keyRepeat) {
                 iterLast.next = newNode;
             }
 

@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  *
  * @author doinb
  * JVM参数
- * -XX:MetaspaceSize=8m -XX:MaxMetaspaceSize=16m
+ * -XX:MetaspaceSize=8m -XX:MaxMetaspaceSize=16m -XX:+HeapDumpOnOutOfMemoryError
  *
  * Java 8及之后的版本使用Metaspace来替代永久代。
  *
