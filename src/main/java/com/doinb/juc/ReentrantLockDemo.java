@@ -29,12 +29,21 @@ class Phone implements Runnable {
     }
 
     private void getd() {
+        /**
+         *  https://www.bilibili.com/video/BV1pJ411M7mb?p=27 第17分钟详细详解
+         *
+         * 同时加两把锁会出现什么情况？  1.编译失败 2.运行时失败 3.执行成功
+         * a.在锁配对的情况下：3.执行成功
+         * b. 锁不配对的情况下：1.编译成功 2.执行时卡死
+         */
+        //lock.lock();
         lock.lock();
         try {
             System.out.println(Thread.currentThread().getName()+ "\t invoked getd()");
             setd();
         } finally {
             lock.unlock();
+            // lock.unlock();
         }
     }
 
