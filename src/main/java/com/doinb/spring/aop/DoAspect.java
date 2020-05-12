@@ -42,10 +42,12 @@ public class DoAspect {
         }
         long end = System.currentTimeMillis();
         log.info("【AOP环绕增强】执行消耗时间：{}", (end - current));
+        /* swagger初始化无法拿到 HttpServletRequest
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = (HttpServletRequest) requestAttributes.resolveReference(RequestAttributes.REFERENCE_REQUEST);
         String ip = ReactiveWebUtils.getRemoteAddress(request);
         log.info("【AOP环绕增强】区域：{}", ipRegionUtils.getRegion(ip));
+        */
         return proceed;
     }
 

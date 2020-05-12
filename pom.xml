@@ -113,6 +113,18 @@
             <artifactId>ip2region</artifactId>
             <version>1.7.2</version>
         </dependency>
+
+        <!--swagger文档配置-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+            <version>1.9.6</version>
+        </dependency>
     </dependencies>
 
     <build>

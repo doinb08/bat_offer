@@ -51,9 +51,14 @@ public final class DefaultProfileUtil {
                         "Application '{}' is running! Access URLs:\n\t" +
                         "Local: \t\t{}://localhost:{}{}\n\t" +
                         "External: \t{}://{}:{}{}\n\t" +
+                        "Swagger: \t{}://{}:{}{}doc.html\n\t" +
                         "Profile(s): \t{}\n----------------------------------------------------------",
                 env.getProperty("spring.application.name"),
                 protocol,
+                serverPort,
+                contextPath,
+                protocol,
+                hostAddress,
                 serverPort,
                 contextPath,
                 protocol,

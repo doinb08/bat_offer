@@ -11,7 +11,7 @@ public class SignUtil {
 
     private static final Logger log = LoggerFactory.getLogger(SignUtil.class);
 
-    public static void validateParams(String nonce, String sign, String timeStamp, String clientId) throws RuntimeException {
+    public static void validateParams(String nonce, String sign, String timeStamp, String clientId) {
         try {
             Assert.notNull(nonce, "签名验证失败:NONCE不能为空");
             Assert.notNull(sign, "签名验证失败:SING不能为空");
@@ -19,7 +19,7 @@ public class SignUtil {
             Assert.notNull(clientId, "签名验证失败:CLIENT_ID不能为空");
         } catch (Exception e) {
             log.error(e.getMessage());
-            throw new RuntimeException();
+            throw new IllegalArgumentException(e.getMessage());
         }
     }
 
