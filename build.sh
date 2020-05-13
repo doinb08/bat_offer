@@ -1,4 +1,4 @@
-mvn -U clean package -Dmaven.test.skip=true --settings deploy/settings.xml
+mvn -U clean package -Dmaven.test.skip=true
 cp target/doinb-1.0.0.jar deploy/bat/bat.jar
 cd deploy
 docker-compose down
