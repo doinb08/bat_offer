@@ -5,6 +5,7 @@ import com.doinb.utils.IpRegionUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.lionsoul.ip2region.Util;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ public class UserController {
     @Autowired
     IpRegionUtils ipRegionUtils;
 
+    @ApiOperation("登录")
     @GetMapping(value = "/user/login")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "username", required = true, value = "用户名", paramType = "query"),
@@ -32,6 +34,7 @@ public class UserController {
         return userService.login(username);
     }
 
+    @ApiOperation("解析IP所属区域")
     @GetMapping(value = "/ip_region")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "ip", required = true, value = "IP地址", paramType = "query"),
