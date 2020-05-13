@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- log4j自生的日志输出级别为warn，定时扫描日志文件变更周期为30秒，支持动态更新日志文件 -->
+<Configuration status="warn" monitorInterval="30">
+    <!-- 全局变量 -->
+    <Properties>
+        <!-- 日志根目录（生产环境建议设置为绝对路径，便于整理） -->
+        <Property name="baseDir">./bat_logs</Property>
+        <!-- 默认日志命名 -->
+        <Property name="applicationName">bat</Property>
+        <!-- 日志格式:时间  日志级别左对齐  (线程名) [JAVA类名：行数] 内容 换行符 -->
+        <Property name="pattern">%d %-5p (%t) [%c{1}:%L] %m%n</Property>
+    </Properties>
+    <Appenders>
+        <!-- 同时按时间和大小归档日志：当日志超过指定归档大小，或到达归档周期时，归档为.gz文件，并存储到当前月的目录下 -->
+        <RollingFile name="RollingFile"
+                     fileName="${baseDir}/${applicationName}.log"
+                     filePermissions="rw-r--r--"
+                     filePattern="${baseDir}/$${date:yyyy-MM}/${applicationName}-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="${pattern}"/>
+            <Policies>
+                <!-- 默认归档周期，由于归档模式为%d{yyyy-MM-dd}，即以天归档，则在凌晨0点 -->
+                <TimeBasedTriggeringPolicy/>
+                <!-- 指定归档大小 -->
+                <SizeBasedTriggeringPolicy size="50 MB"/>
+            </Policies>
+            <!-- 一个归档周期最大归档个数 -->
+            <DefaultRolloverStrategy max="100">
+                <!-- 定时清理归档文件 -->
+                <Delete basePath="${baseDir}" maxDepth="2">
+                    <IfFileName glob="*/${applicationName}-*.log.gz">
+                        <!-- 清理30天以前的归档文件 -->
+                        <IfLastModified age="30d">
+                            <!-- 当满足清理条件时 -->
+                            <IfAny>
+                                <!-- 保留最近的1个G归档文件 -->
+                                <IfAccumulatedFileSize exceeds="5 GB"/>
+                                <!-- 保留最近的60个归档文件 -->
+                                <IfAccumulatedFileCount exceeds="60"/>
+                            </IfAny>
+                        </IfLastModified>
+                    </IfFileName>
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+        <!-- 控制台输出 -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${pattern}"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="RollingFile"/>
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

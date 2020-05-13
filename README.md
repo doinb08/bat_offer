@@ -25,10 +25,12 @@
 >  2. maven 3.6.x
 >  3. lombok插件
 >  4. 启动DoApplication可访问简易版springboot工程, 使用AOP则启动DoAopApplication。
+>  5. Demo在线演示地址（仅用于展示swagger文档）： 
 
 ## java工具类库-提升编码效率
 >https://github.com/looly/hutool  
-https://apidoc.gitee.com/loolly/hutool/
+https://apidoc.gitee.com/loolly/hutool/   
+[前后端框架脚手架](https://blog.csdn.net/zj7321/article/details/81586244)
 
 ## 分库分表面试题
 >http://www.imooc.com/article/301836  

@@ -4,3 +4,4 @@
 *.iml
 *.ipr
 /target
+/bat_logs/

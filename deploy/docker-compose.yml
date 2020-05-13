@@ -1,0 +1,11 @@
+version: "3"
+services:
+  bat_service:
+    build: bat
+    ports:
+      - 2020:2020
+    volumes:
+      - ./bat_logs:/bat_logs
+      - /etc/timezone:/etc/timezone
+      - /etc/localtime:/etc/localtime
+

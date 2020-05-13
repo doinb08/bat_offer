@@ -22,6 +22,8 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
      * 可以分目录搭建 swagger
      * 扫描 com.doinb.web 包路径
      *
+     * 使用文档参考： https://blog.csdn.net/X_Xian_/article/details/82969105
+     *
      * @return
      */
     @Bean
