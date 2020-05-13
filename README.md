@@ -25,7 +25,9 @@
 >  2. maven 3.6.x
 >  3. lombok插件
 >  4. 启动DoApplication可访问简易版springboot工程, 使用AOP则启动DoAopApplication。
->  5. [Demo在线演示地址（仅用于展示swagger文档）](http://120.25.218.74:2020/doc.html )
+>  5. [Demo在线演示地址（仅用于展示swagger文档）](http://120.25.218.74:2020/doc.html)    
+>  6. [基于开源代码搭建个人微服务网站-此版本我定制化改造后台逻辑](http://111.229.96.67:8890/#/login) 账号/密码：doinbb/doinb@Test   
+>  7. [微服务架构开源地址](https://github.com/liuyadu/open-cloud.git)  
 
 ## java工具类库-提升编码效率
 >https://github.com/looly/hutool  
