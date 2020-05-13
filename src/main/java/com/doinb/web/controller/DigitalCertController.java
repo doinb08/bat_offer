@@ -2,6 +2,7 @@ package com.doinb.web.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.doinb.web.vo.BaseResponse;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -18,9 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping("/bat")
+@Api(value = "查询证书", tags = "查询证书")
 public class DigitalCertController {
 
-    @ApiOperation("查询数字证书")
+    @ApiOperation("查询证书")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "serialNo", required = true, value = "序列号", paramType = "query"),
             @ApiImplicitParam(name = "idCard", required = true, value = "身份证号", paramType = "query"),

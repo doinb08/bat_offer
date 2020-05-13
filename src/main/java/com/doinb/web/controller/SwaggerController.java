@@ -2,6 +2,7 @@ package com.doinb.web.controller;
 
 import com.doinb.web.vo.BaseResponse;
 import com.doinb.web.vo.UserVo;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -16,6 +17,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping(value = "/bat")
+@Api(value = "Swagger注解演示", tags = "Swagger注解演示")
 public class SwaggerController {
 
     /**
