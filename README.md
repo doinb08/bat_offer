@@ -48,6 +48,7 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 
 ## 分布式事务解决方案
 >[SpringCloudAlibabaSeata官网](https://seata.io/zh-cn)    
+>[源代码参考分布式事务解决方案](https://github.com/doinb08/my_alibaba_seata.git)   
 
 ## 网络原理
 >[面试 HTTP ，99% 的面试官都爱问这些问题](https://mp.weixin.qq.com/s/F_wrb6g1jnC_g903EHlS-w)
