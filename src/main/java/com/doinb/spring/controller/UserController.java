@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping(value = "/bat")
-@Api(value = "用户信息", tags = "用户信息")
+@Api(value = "登录", tags = "登录")
 public class UserController {
     @Autowired
     UserService userService;

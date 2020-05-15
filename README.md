@@ -74,4 +74,6 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 [面试官问：为什么需要消息队列？使用消息队列有什么好处？](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486211&idx=1&sn=28b470281c083d7453f08b1c3377b83f&chksm=f94a8aeace3d03fcf3ffefa2eca67ff4b4f9cd426b7b4ba547c03863b7b0712e1f20896abfd0&scene=21#wechat_redirect)  
 [Spring MVC 面经](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486171&idx=1&sn=57c3feef86b0c7d5d049032c82eb2ed5&chksm=f94a8b32ce3d02248d797fa781fab04a8baa4d881415bfd88088f650cdb7b24204142ccf0154&scene=21#wechat_redirect)   
 [Spring经典面试题总结](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486096&idx=1&sn=8a471403c996fb61b05bd631970d2e1b&chksm=f94a8b79ce3d026f881d382996db1a6875c1b6895dd12129c9091e690612c14611a56e69518b&scene=21#wechat_redirect)   
-[史上最全多线程面试题 ！](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486083&idx=1&sn=b431e6e522fe202279b24ae80ddfdcff&chksm=f94a8b6ace3d027c5a5b21c7bce84ef879307f0e30f4b6398a3936b2e64f48fd569ed17b05ff&scene=21#wechat_redirect)  
+[史上最全多线程面试题 ！](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486083&idx=1&sn=b431e6e522fe202279b24ae80ddfdcff&chksm=f94a8b6ace3d027c5a5b21c7bce84ef879307f0e30f4b6398a3936b2e64f48fd569ed17b05ff&scene=21#wechat_redirect)    
+[Docker入门视频教程](https://www.bilibili.com/video/BV1Vs411E7AR)     
+[裂墙推荐！微服务视频教程-尚硅谷2020最新版SpringCloud框架开发教程全套完整版从入门到精通](https://www.bilibili.com/video/BV18E411x7eT)    

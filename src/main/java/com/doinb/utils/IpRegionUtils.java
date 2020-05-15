@@ -85,7 +85,7 @@ public class IpRegionUtils {
             DataBlock dataBlock = (DataBlock) method.invoke(searcher, ip);
             String result = dataBlock.getRegion();
             long endTime = System.currentTimeMillis();
-            log.info("region use time[{}ms] result[{}]", endTime - startTime, result);
+            // log.info("region use time[{}ms] result[{}]", endTime - startTime, result);
 
             return result;
         } catch (Exception e) {
