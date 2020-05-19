@@ -2,6 +2,7 @@ package com.doinb.spring.controller;
 
 import com.doinb.spring.service.UserService;
 import com.doinb.utils.IpRegionUtils;
+import com.doinb.web.vo.BaseResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -39,11 +40,12 @@ public class UserController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "ip", required = true, value = "IP地址", paramType = "query"),
     })
-    public Object getIpRegion(@RequestParam String ip) {
+    public BaseResponse<?> getIpRegion(@RequestParam String ip) {
         if (!Util.isIpAddress(ip)) {
             log.warn("非法的IP地址");
-            return ip;
+            return BaseResponse.badRequest(ip);
         }
-        return ipRegionUtils.getRegion(ip);
+        String region = ipRegionUtils.getRegion(ip);
+        return BaseResponse.success(region);
     }
 }
