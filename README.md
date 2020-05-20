@@ -1,7 +1,41 @@
-# BAT_OFFER
-2019-2020年互联网公司高频重点面试题
+<h2 align="center"><code>2019-2020年互联网公司高频重点面试题</code></h2>
 
-## 想要成为一名出色的程序员首先要具备如下能力
+<br>
+    <p align="center"><i>互联网公司Java高频面试指南</i></p>
+<br>
+
+<p align="center">
+  <a href="https://github.com/doinb08/bat_offer.git">
+    <img src="https://img.shields.io/badge/Branch-master-green.svg?longCache=true"
+        alt="Branch">
+  </a>
+  <a href="https://github.com/doinb08/bat_offer/stargazers">
+    <img src="https://img.shields.io/github/stars/doinb08/bat_offer.svg?label=Stars&style=social"
+        alt="Stars">
+  </a>
+    <a href="https://github.com/doinb08/bat_offer/network/members">
+    <img src="https://img.shields.io/github/forks/doinb08/bat_offer.svg?label=Forks&style=social"
+        alt="Forks">
+  </a>
+  <a href="https://github.com/doinb08/bat_offer">
+    <img src="https://img.shields.io/badge/License-GNU-blue.svg?longCache=true"
+        alt="License">
+  </a>
+   <a href="https://github.com/doinb08/bat_offer">
+   <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"
+        alt="Awesome">
+  </a>
+</p>
+<br>
+    <div align="center">
+      Created by
+      <a href="https://github.com/doinb08">doinb</a>
+    </div>
+<br>
+
+****
+
+# 高级Java程序员的核心竞争力
 > 1. Java基础扎实、掌握JVM原理、多线程、网络原理、设计模式、常用数据结构和算法。
 > 2. 深入理解Spring,Spring MVC Mybatis等开源框架设计原理及底层架构，研究过部分核心功能源码。
 > 3. 深入理解Redis线程模型，熟练掌握Redis的核心数据结构的使用场景，熟悉各种缓存高并发的使用场景，比如缓存雪崩，缓存穿透，缓存失效，热点缓存重建等。
