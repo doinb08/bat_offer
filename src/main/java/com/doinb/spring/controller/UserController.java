@@ -46,6 +46,7 @@ public class UserController {
             return BaseResponse.badRequest(ip);
         }
         String region = ipRegionUtils.getRegion(ip);
-        return BaseResponse.success(region);
+        String region2 = ipRegionUtils.getCityByIP(ip);
+        return BaseResponse.success("region:"+region+" region2:"+region2);
     }
 }

@@ -111,3 +111,6 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 [史上最全多线程面试题 ！](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486083&idx=1&sn=b431e6e522fe202279b24ae80ddfdcff&chksm=f94a8b6ace3d027c5a5b21c7bce84ef879307f0e30f4b6398a3936b2e64f48fd569ed17b05ff&scene=21#wechat_redirect)    
 [Docker入门视频教程](https://www.bilibili.com/video/BV1Vs411E7AR)     
 [裂墙推荐！微服务视频教程-尚硅谷2020最新版SpringCloud框架开发教程全套完整版从入门到精通](https://www.bilibili.com/video/BV18E411x7eT)    
+
+## 优秀开源项目推荐  
+[Spring Cloud 系列项目学习案例](https://github.com/YunaiV/SpringBoot-Labs)    
