@@ -111,6 +111,7 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 [史上最全多线程面试题 ！](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486083&idx=1&sn=b431e6e522fe202279b24ae80ddfdcff&chksm=f94a8b6ace3d027c5a5b21c7bce84ef879307f0e30f4b6398a3936b2e64f48fd569ed17b05ff&scene=21#wechat_redirect)    
 [Docker入门视频教程](https://www.bilibili.com/video/BV1Vs411E7AR)      
 [Docker详细讲解](http://www.iocoder.cn/Docker/good-collection/)    
+[CORS跨域讲解](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)   
 
 ## 优秀开源项目推荐  
 [Spring Cloud 系列项目学习案例](https://github.com/YunaiV/SpringBoot-Labs)     
