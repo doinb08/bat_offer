@@ -48,20 +48,11 @@
 
 > 10.具备应用程序从构建、部署、测试和发布过程的自动化DevOps能力，如：Docker、K8s、Jenkins等技术栈。
 
-## Spring源码专题视频学习资料视频地址: 
-> https://www.bilibili.com/video/BV1yE41187A3
-
-## JUC专题视频学习资料视频地址：
-> https://www.bilibili.com/video/av68723403
-
 ## 本工程演示需要用到spring，故建立一个简易版的springboot工程，启动本工程必备环境：
 >  1. jdk1.8_xx
 >  2. maven 3.6.x
 >  3. lombok插件
 >  4. 启动DoApplication可访问简易版springboot工程, 使用AOP则启动DoAopApplication。
->  5. [Demo在线演示地址（仅用于展示swagger文档）](http://120.25.218.74:2020/doc.html)    
->  6. [基于开源代码搭建个人微服务网站-此版本我定制化改造后台逻辑](http://111.229.96.67:8890/#/login) 账号/密码：doinbb/doinb@Test   
->  7. [微服务架构开源地址](https://github.com/liuyadu/open-cloud.git)  
 
 ## java工具类库-提升编码效率
 >https://github.com/looly/hutool  
@@ -92,8 +83,8 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 >[视频学习Netty](https://www.bilibili.com/video/BV17t41137su?p=2)  
 
 ## 面试专场
->[面试技巧1](https://mp.weixin.qq.com/s/_LIPtYukiysDnsLc1erBhw)    
-[面试技巧2](https://www.cnblogs.com/JavaArchitect/p/12298114.html)    
+>[面试技巧-进大厂也就这回事](https://mp.weixin.qq.com/s/_LIPtYukiysDnsLc1erBhw)    
+[面试技巧-如何把面试官的提问引导到自己准备好的范围内](https://www.cnblogs.com/JavaArchitect/p/12298114.html)    
 [Redis面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486246&idx=1&sn=c9c670ce5d4e17d156bcc9e309efde98&chksm=f94a8acfce3d03d97a6dce52a86d9898dcfd8c25309e6121fa4b2aa6a9c4c8079c29e4099a70&scene=21#wechat_redirect)  
 [Spring Boot面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486357&idx=1&sn=126e2f979906e823aad46c93d310d820&chksm=f94a8a7cce3d036af7e805eab62bc323581a02c13e4ed8a87b91b1324f3791fc08a0e81fd312&scene=21#wechat_redirect)  
 [Tomcat面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486250&idx=1&sn=7de9aebd26dd06b5e27390f8cd5652b9&chksm=f94a8ac3ce3d03d5759d865d84052b675f9360b11369d4f44e63e815b6160e6d2ccd279464f0&scene=21#wechat_redirect)  
@@ -123,4 +114,6 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 
 ## SpringCloud学习视频推荐
 [2020尚硅谷《谷粒商城》-技术栈非常全面](https://www.bilibili.com/video/BV1QA41187m2)    
-[微服务视频教程-尚硅谷2020最新版SpringCloud框架开发教程全套完整版从入门到精通](https://www.bilibili.com/video/BV18E411x7eT)    
+[微服务视频教程-尚硅谷2020最新版SpringCloud框架开发教程全套完整版从入门到精通](https://www.bilibili.com/video/BV18E411x7eT)      
+[Spring源码专题视频学习资料](https://www.bilibili.com/video/BV1yE41187A3)   
+[juc专题视频学习资料](https://www.bilibili.com/video/av68723403)  
