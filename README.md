@@ -73,7 +73,6 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 
 ## 分布式事务解决方案
 >[SpringCloudAlibabaSeata官网](https://seata.io/zh-cn)    
->[源代码参考分布式事务解决方案](https://github.com/doinb08/my_alibaba_seata.git)   
 
 ## 网络原理
 >[面试 HTTP ，99% 的面试官都爱问这些问题](https://mp.weixin.qq.com/s/F_wrb6g1jnC_g903EHlS-w)
@@ -103,6 +102,8 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 [Docker入门视频教程](https://www.bilibili.com/video/BV1Vs411E7AR)      
 [Docker详细讲解](http://www.iocoder.cn/Docker/good-collection/)    
 [CORS跨域讲解](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)   
+[MySQL索引面试题](https://www.jianshu.com/p/c82148473235)  
+[数据库分库分表shardingJDBC-数据迁移难题](https://www.iteye.com/blog/mingkongeye-2300683)   
 
 ## 优秀开源项目推荐  
 [Spring Cloud 系列项目学习案例](https://github.com/YunaiV/SpringBoot-Labs)     
