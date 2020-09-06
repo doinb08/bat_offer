@@ -114,7 +114,7 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 [MyBatis源码-GitHub地址](https://github.com/mybatis/mybatis-3)    
 
 ## SpringCloud学习视频推荐
-[2020尚硅谷《谷粒商城》-技术栈非常全面](https://www.bilibili.com/video/BV1QA41187m2)    
-[微服务视频教程-尚硅谷2020最新版SpringCloud框架开发教程全套完整版从入门到精通](https://www.bilibili.com/video/BV18E411x7eT)      
+[2020尚硅谷《谷粒商城》-技术栈非常全面-网盘提取码：2zdr](https://pan.baidu.com/s/1Zb-6pOPj6GyozoBMyiGHww)  
+[微服务视频教程-尚硅谷2020最新版 SpringCloud 框架开发教程全套完整版从入门到精通](https://www.bilibili.com/video/BV18E411x7eT)      
 [Spring源码专题视频学习资料](https://www.bilibili.com/video/BV1yE41187A3)   
 [juc专题视频学习资料](https://www.bilibili.com/video/av68723403)  
