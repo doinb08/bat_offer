@@ -43,7 +43,7 @@ public class RandomValueUtil {
      */
     private static String[] telFirst = "134,135,136,137,138,139,150,151,152,157,158,159,130,131,132,155,156,133,153".split(",");
 
-    private static String getTel() {
+    public static String getTel() {
         int index = getNum(0, telFirst.length - 1);
         String first = telFirst[index];
         String second = String.valueOf(getNum(1, 888) + 10000).substring(1);
@@ -54,9 +54,9 @@ public class RandomValueUtil {
     /**
      * 返回中文姓名
      */
-    private static String name_sex = "";
+    public static String name_sex = "";
 
-    private static String getChineseName() {
+    public static String getChineseName() {
         int index = getNum(0, firstName.length() - 1);
         String first = firstName.substring(index, index + 1);
         int sex = getNum(0, 1);
@@ -85,7 +85,7 @@ public class RandomValueUtil {
      *
      * @return
      */
-    private static String getRoad() {
+    public static String getRoad() {
         int index = getNum(0, road.length - 1);
         String first = road[index];
         String second = String.valueOf(getNum(11, 150)) + "号";
