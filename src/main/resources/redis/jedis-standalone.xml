@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <import resource="classpath:redis/jedis-client.xml"/>
+
+    <!-- 单机版连接工厂 -->
+    <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+        <constructor-arg name="standaloneConfig">
+            <bean class="com.doinb.redis.lock.DistributedRedisStandaloneConfiguration">
+                <constructor-arg name="clusterNodes" value="${redis.clusterNodes}"/>
+                <constructor-arg name="password" value="${redis.password}"/>
+            </bean>
+        </constructor-arg>
+        <constructor-arg name="clientConfig">
+            <bean class="com.doinb.redis.lock.DistributedJedisClientConfiguration">
+                <constructor-arg name="clientName" value="${redis.jedis.clientName:jedis-cache}"/>
+                <constructor-arg name="usePooling" value="false"/>
+                <constructor-arg name="poolConfig" ref="jedisPoolConfig"/>
+                <property name="connectTimeout" value="${redis.jedis.connectTimeout:3000}"/>
+                <property name="readTimeout" value="${redis.jedis.readTimeout:3000}"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    <import resource="classpath:redis/redis-template.xml"/>
+</beans>

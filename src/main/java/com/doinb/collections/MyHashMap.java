@@ -1,5 +1,12 @@
 package com.doinb.collections;
 
+import com.google.common.collect.Maps;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
+
 /**
  * 手写HashMap
  *
@@ -61,16 +68,47 @@ public class MyHashMap {
     }
 
     public static void main(String[] args) {
-        MyHashMap hashMap = new MyHashMap();
-        hashMap.put("kc", "cc");
-        hashMap.put("kb", "bb");
-        hashMap.put("kd", "dd");
-        hashMap.put("ks", "ssss");
 
-        System.out.println(hashMap);
+        Map<String, String> map = new HashMap<>();
+//        Map<String, String> map = new Hashtable<>();
+        map.put("google", "google.com");
+        map.put("rinoob", "runoob.com");
 
-        int hash = "kc".hashCode();
-        System.out.println(myHash(hash, 16));
+        ArrayList<String> sites = new ArrayList<>();
+
+        sites.add("Runoob");
+        sites.add("Google");
+        sites.add("Wiki");
+        sites.add("Taobao");
+        System.out.println("网站列表: " + sites);
+        // 将ArrayList转换为String类型
+        String list = sites.toString();
+        System.out.println("String: " + list);
+
+        sites.removeIf(e ->{ return e.contains("Taobao");});
+
+        ArrayList clone = (ArrayList)sites.clone();
+
+
+        clone.forEach(e->{
+            System.out.println(e + " clone ");
+        });
+
+        sites.forEach(e->{
+            System.out.println(e + " ");
+        });
+
+//
+//        MyHashMap hashMap = new MyHashMap();
+//        hashMap.put("kc", "cc");
+//        hashMap.put("kb", "bb");
+//        hashMap.put("kd", "dd");
+//        hashMap.put("ks", "ssss");
+//
+//        System.out.println(hashMap);
+//
+//        int hash = "kc".hashCode();
+//        System.out.println(myHash(hash, 16));
     }
 
     // hash只是为了散列，作用一样，但并不是结果值一样。
