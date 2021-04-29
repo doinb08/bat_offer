@@ -104,7 +104,7 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 [CORS跨域讲解](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)   
 [MySQL索引面试题](https://www.jianshu.com/p/c82148473235)  
 [数据库分库分表shardingJDBC-数据迁移难题](https://www.iteye.com/blog/mingkongeye-2300683)   
-
+[如果你是一个 Java 面试官，你会问哪些问题？](https://www.zhihu.com/question/443280657/answer/1785592611)   
 ## 优秀开源项目推荐  
 [Spring Cloud 系列项目学习案例](https://github.com/YunaiV/SpringBoot-Labs)     
 [JAVA全套技术学习-芋道源码](http://www.iocoder.cn/?bilibili&BV1bE411p7As#)    
