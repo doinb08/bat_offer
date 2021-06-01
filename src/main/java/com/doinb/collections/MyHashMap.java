@@ -1,11 +1,10 @@
 package com.doinb.collections;
 
+import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Maps;
+import org.apache.commons.codec.digest.DigestUtils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 手写HashMap
@@ -68,9 +67,22 @@ public class MyHashMap {
     }
 
     public static void main(String[] args) {
+        // 测试MD5加密
+        List<String> doc = new ArrayList<>();
+        doc.add("google");
+        doc.add("rinoob");
+        String string = JSON.toJSONString(doc);
+        System.out.println("string"+string);
+        String sign = DigestUtils.md5Hex(string).toUpperCase();
+        // E6721A175CD2D3DB5F3E6EAABC159E10
+        // E6721A175CD2D3DB5F3E6EAABC159E10
+        // E6721A175CD2D3DB5F3E6EAABC159E10  -- 多次加密结果一致
+        System.out.println(sign);
+        System.out.println("加密长度" + sign.length());
 
         Map<String, String> map = new HashMap<>();
-//        Map<String, String> map = new Hashtable<>();
+        Hashtable<String, String> hashTable = new Hashtable<>();
+        hashTable.put("google", "google.com");
         map.put("google", "google.com");
         map.put("rinoob", "runoob.com");
 
