@@ -12,7 +12,7 @@ import java.math.RoundingMode;
  * @description BigDecimal帮助类
  * @createTime 2022/02/07
  */
-public class BigDecimalHelper {
+public class BigDecimalUtil {
 
     /**
      * 定义一些常量
@@ -32,7 +32,7 @@ public class BigDecimalHelper {
     /**
      * 私有无参构造
      */
-    private BigDecimalHelper() {
+    private BigDecimalUtil() {
 
     }
 
@@ -41,7 +41,7 @@ public class BigDecimalHelper {
      *
      * @param value value值
      */
-    private BigDecimalHelper(BigDecimal value) {
+    private BigDecimalUtil(BigDecimal value) {
         this.value = value;
     }
 
@@ -61,7 +61,7 @@ public class BigDecimalHelper {
      *
      * @param val value值 只接受BigDecimal类型和String类型的数字
      */
-    public static BigDecimalHelper build(@NotNull Object val) {
+    public static BigDecimalUtil build(@NotNull Object val) {
         Assert.isTrue(val != null, "param cannot be null!");
         return val instanceof BigDecimal ? build(((BigDecimal) val)) : build(val.toString());
     }
@@ -71,8 +71,8 @@ public class BigDecimalHelper {
      *
      * @param val value值
      */
-    public static BigDecimalHelper build(@NotNull String val) {
-        return new BigDecimalHelper(strToDecimal(val));
+    public static BigDecimalUtil build(@NotNull String val) {
+        return new BigDecimalUtil(strToDecimal(val));
     }
 
     /**
@@ -80,9 +80,9 @@ public class BigDecimalHelper {
      *
      * @param val value值
      */
-    public static BigDecimalHelper build(@NotNull BigDecimal val) {
+    public static BigDecimalUtil build(@NotNull BigDecimal val) {
         Assert.isTrue(val != null, "param cannot be null!");
-        return new BigDecimalHelper(val);
+        return new BigDecimalUtil(val);
     }
 
     /**
@@ -90,7 +90,7 @@ public class BigDecimalHelper {
      *
      * @param value value
      */
-    public boolean gt(@NotNull BigDecimalHelper value) {
+    public boolean gt(@NotNull BigDecimalUtil value) {
         return gt(value.getValue());
     }
 
@@ -117,7 +117,7 @@ public class BigDecimalHelper {
      *
      * @param value value
      */
-    public boolean gte(@NotNull BigDecimalHelper value) {
+    public boolean gte(@NotNull BigDecimalUtil value) {
         return gte(value.getValue());
     }
 
@@ -144,7 +144,7 @@ public class BigDecimalHelper {
      *
      * @param value value
      */
-    public boolean lt(@NotNull BigDecimalHelper value) {
+    public boolean lt(@NotNull BigDecimalUtil value) {
         return lt(value.getValue());
     }
 
@@ -171,7 +171,7 @@ public class BigDecimalHelper {
      *
      * @param value value
      */
-    public boolean lte(@NotNull BigDecimalHelper value) {
+    public boolean lte(@NotNull BigDecimalUtil value) {
         return lte(value.getValue());
     }
 
@@ -198,7 +198,7 @@ public class BigDecimalHelper {
      *
      * @param value value
      */
-    public boolean eq(@NotNull BigDecimalHelper value) {
+    public boolean eq(@NotNull BigDecimalUtil value) {
         return eq(value.getValue());
     }
 
@@ -225,7 +225,7 @@ public class BigDecimalHelper {
      *
      * @param value value
      */
-    public boolean neq(@NotNull BigDecimalHelper value) {
+    public boolean neq(@NotNull BigDecimalUtil value) {
         return !eq(value);
     }
 
@@ -273,7 +273,7 @@ public class BigDecimalHelper {
      * @param small 小值
      * @param large 大值
      */
-    public boolean isBetweenOrEq(@NotNull BigDecimalHelper small, @NotNull BigDecimalHelper large) {
+    public boolean isBetweenOrEq(@NotNull BigDecimalUtil small, @NotNull BigDecimalUtil large) {
         return lte(large) && gte(small);
     }
 
@@ -283,7 +283,7 @@ public class BigDecimalHelper {
      * @param small 小值
      * @param large 大值
      */
-    public boolean isBetween(@NotNull BigDecimalHelper small, @NotNull BigDecimalHelper large) {
+    public boolean isBetween(@NotNull BigDecimalUtil small, @NotNull BigDecimalUtil large) {
         return lt(large) && gt(small);
     }
 
@@ -312,7 +312,7 @@ public class BigDecimalHelper {
      *
      * @param value 加数
      */
-    public BigDecimalHelper add(@NotNull BigDecimal value) {
+    public BigDecimalUtil add(@NotNull BigDecimal value) {
         return build(this.value.add(value));
     }
 
@@ -321,7 +321,7 @@ public class BigDecimalHelper {
      *
      * @param value 加数
      */
-    public BigDecimalHelper add(@NotNull BigDecimalHelper value) {
+    public BigDecimalUtil add(@NotNull BigDecimalUtil value) {
         return add(value.getValue());
     }
 
@@ -330,7 +330,7 @@ public class BigDecimalHelper {
      *
      * @param value 加数
      */
-    public BigDecimalHelper add(@NotNull String value) {
+    public BigDecimalUtil add(@NotNull String value) {
         return add(strToDecimal(value));
     }
 
@@ -339,7 +339,7 @@ public class BigDecimalHelper {
      *
      * @param value 减数
      */
-    public BigDecimalHelper sub(@NotNull BigDecimal value) {
+    public BigDecimalUtil sub(@NotNull BigDecimal value) {
         return build(this.value.subtract(value));
     }
 
@@ -348,7 +348,7 @@ public class BigDecimalHelper {
      *
      * @param value 减数
      */
-    public BigDecimalHelper sub(@NotNull BigDecimalHelper value) {
+    public BigDecimalUtil sub(@NotNull BigDecimalUtil value) {
         return sub(value.getValue());
     }
 
@@ -357,7 +357,7 @@ public class BigDecimalHelper {
      *
      * @param value 减数
      */
-    public BigDecimalHelper sub(@NotNull String value) {
+    public BigDecimalUtil sub(@NotNull String value) {
         return sub(strToDecimal(value));
     }
 
@@ -366,7 +366,7 @@ public class BigDecimalHelper {
      *
      * @param value 乘数
      */
-    public BigDecimalHelper mul(@NotNull BigDecimal value) {
+    public BigDecimalUtil mul(@NotNull BigDecimal value) {
         return build(this.value.multiply(value));
     }
 
@@ -375,7 +375,7 @@ public class BigDecimalHelper {
      *
      * @param value 乘数
      */
-    public BigDecimalHelper mul(@NotNull BigDecimalHelper value) {
+    public BigDecimalUtil mul(@NotNull BigDecimalUtil value) {
         return mul(value.getValue());
     }
 
@@ -384,7 +384,7 @@ public class BigDecimalHelper {
      *
      * @param value 乘数
      */
-    public BigDecimalHelper mul(@NotNull String value) {
+    public BigDecimalUtil mul(@NotNull String value) {
         return mul(strToDecimal(value));
     }
 
@@ -393,7 +393,7 @@ public class BigDecimalHelper {
      *
      * @param value 除数
      */
-    public BigDecimalHelper div(@NotNull BigDecimal value) {
+    public BigDecimalUtil div(@NotNull BigDecimal value) {
         return div(value, DEF_DIV_SCALE);
     }
 
@@ -402,7 +402,7 @@ public class BigDecimalHelper {
      *
      * @param value 除数
      */
-    public BigDecimalHelper div(@NotNull BigDecimalHelper value) {
+    public BigDecimalUtil div(@NotNull BigDecimalUtil value) {
         return div(value.getValue(), DEF_DIV_SCALE);
     }
 
@@ -411,7 +411,7 @@ public class BigDecimalHelper {
      *
      * @param value 除数
      */
-    public BigDecimalHelper div(@NotNull String value) {
+    public BigDecimalUtil div(@NotNull String value) {
         return div(strToDecimal(value), DEF_DIV_SCALE);
     }
 
@@ -421,7 +421,7 @@ public class BigDecimalHelper {
      * @param value 除数
      * @param scale scale
      */
-    public BigDecimalHelper div(@NotNull BigDecimal value, @NotNull int scale) {
+    public BigDecimalUtil div(@NotNull BigDecimal value, @NotNull int scale) {
         Assert.isTrue(scale >= ZERO, "The scale must be a positive integer or zero");
         //0除以任何数都为0
         if (eq(BigDecimal.ZERO)) {
@@ -438,7 +438,7 @@ public class BigDecimalHelper {
      * @param value 除数
      * @param scale scale
      */
-    public BigDecimalHelper div(@NotNull BigDecimalHelper value, @NotNull int scale) {
+    public BigDecimalUtil div(@NotNull BigDecimalUtil value, @NotNull int scale) {
         return div(value.getValue(), scale);
     }
 
@@ -448,14 +448,14 @@ public class BigDecimalHelper {
      * @param value 除数
      * @param scale scale
      */
-    public BigDecimalHelper div(@NotNull String value, @NotNull int scale) {
+    public BigDecimalUtil div(@NotNull String value, @NotNull int scale) {
         return div(strToDecimal(value), scale);
     }
 
     /**
      * 四舍五入保留两位小数
      */
-    public BigDecimalHelper round() {
+    public BigDecimalUtil round() {
         return build(this.value.setScale(TWO, BigDecimal.ROUND_HALF_UP));
     }
 
@@ -463,7 +463,7 @@ public class BigDecimalHelper {
     /**
      * 四舍五入保留scale位
      */
-    public BigDecimalHelper round(@NotNull int scale) {
+    public BigDecimalUtil round(@NotNull int scale) {
         Assert.isTrue(scale >= ZERO, "The scale must be a positive integer or zero");
         BigDecimal one = BigDecimal.ONE;
         return build(this.value.divide(one, scale, BigDecimal.ROUND_HALF_UP));
