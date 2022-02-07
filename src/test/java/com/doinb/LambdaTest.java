@@ -82,30 +82,43 @@ public class LambdaTest {
             System.out.println("年龄 " + demo.getAge() + "  性别 " + demo.getSex() + ",");
         });
 
+        System.out.println("========================================================\n");
+
         // 按照年龄分组
         System.out.println("根据age分组结果为Map****************");
         Map<String, List<Demo>> demoOder = demos.stream().collect(Collectors.groupingBy(Demo::getAge));
         System.out.println(demoOder);
 
+        System.out.println("========================================================\n");
+
         // 收集为map
-        System.out.println("收集为map**************");
+        System.out.println(" >>> 收集为demoMaps1**************");
         // toMap有个重载方法，可以传入一个合并的函数来解决key冲突问题：(key1, key2) -> key2), 只是简单的使用后者覆盖前者来解决key重复问题。
         // toMap还有另一个重载方法，可以指定一个Map的具体实现，来收集数据：(key1, key2) -> key2, LinkedHashMap::new)
         // demos.stream().collect(Collectors.toMap(Demo::getAge, Function.identity(), (k1, k2) -> k2, HashMap::new))
-        demos.stream().collect(Collectors.toMap(Demo::getName,Function.identity(), (k1, k2) -> k2, HashMap::new))
-                .forEach((key, value) -> System.out.println(key + "=" + value));
+        HashMap<String, Demo> demoMaps1 = demos.stream().collect(Collectors.toMap(Demo::getName, Function.identity(), (k1, k2) -> k2, HashMap::new));
+        demoMaps1.forEach((key, value) -> System.out.println(key + "=" + value));
+
+        System.out.println("========================================================\n");
+
+        System.out.println(" >>> 收集为demoMaps2**************");
+        HashMap<String, Object> demoMaps2 = demos.stream().collect(HashMap::new, (k, v) -> k.put(v.getName(), v.getAge()), HashMap::putAll);
+        demoMaps2.forEach((key, value) -> System.out.println(key + "=" + value));
     }
+
 
     private List<Student> getStudents() {
         List<Student> list = new ArrayList<>();
-        list.add(new Student().setAge("12").setSex(0).setName("张三丰"));
-        list.add(new Student().setAge("13").setSex(2).setName("赵无极"));
+        list.add(new Student().setAge("12").setSex(1).setName("张三丰"));
+        list.add(new Student().setAge("13").setSex(1).setName("赵无极"));
         list.add(new Student().setAge("11").setSex(1).setName("冯绍峰"));
-        list.add(new Student().setAge("18").setSex(1).setName("杨幂"));
-        list.add(new Student().setAge("20").setSex(0).setName("tfboy"));
-        list.add(new Student().setAge("18").setSex(2).setName("李逵"));
-        list.add(new Student().setAge("18").setSex(2).setName("黑人"));
-        list.add(new Student().setAge("23").setSex(3).setName("tfboy"));
+        list.add(new Student().setAge("18").setSex(0).setName("杨幂"));
+        list.add(new Student().setAge("20").setSex(1).setName("tfboy"));
+        list.add(new Student().setAge("29").setSex(1).setName("李逵"));
+        list.add(new Student().setAge("28").setSex(1).setName("黑人"));
+        list.add(new Student().setAge("31").setSex(1).setName("黑人"));
+        list.add(new Student().setAge("30").setSex(1).setName("黑人"));
+        list.add(new Student().setAge("23").setSex(1).setName("tfboy"));
         return list;
     }
 

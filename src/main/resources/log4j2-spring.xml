@@ -4,9 +4,9 @@
     <!-- 全局变量 -->
     <Properties>
         <!-- 日志根目录（生产环境建议设置为绝对路径，便于整理） -->
-        <Property name="baseDir">./bat_logs</Property>
+        <Property name="baseDir">./logs</Property>
         <!-- 默认日志命名 -->
-        <Property name="applicationName">bat</Property>
+        <Property name="applicationName">log_all</Property>
         <!-- 日志格式:时间  日志级别左对齐  (线程名) [JAVA类名：行数] 内容 换行符 -->
         <Property name="pattern">%d %-5p (%t) [%c{1}:%L] %m%n</Property>
     </Properties>
@@ -21,10 +21,10 @@
                 <!-- 默认归档周期，由于归档模式为%d{yyyy-MM-dd}，即以天归档，则在凌晨0点 -->
                 <TimeBasedTriggeringPolicy/>
                 <!-- 指定归档大小 -->
-                <SizeBasedTriggeringPolicy size="50 MB"/>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
             </Policies>
             <!-- 一个归档周期最大归档个数 -->
-            <DefaultRolloverStrategy max="100">
+            <DefaultRolloverStrategy max="10">
                 <!-- 定时清理归档文件 -->
                 <Delete basePath="${baseDir}" maxDepth="2">
                     <IfFileName glob="*/${applicationName}-*.log.gz">
@@ -32,10 +32,10 @@
                         <IfLastModified age="30d">
                             <!-- 当满足清理条件时 -->
                             <IfAny>
-                                <!-- 保留最近的1个G归档文件 -->
-                                <IfAccumulatedFileSize exceeds="5 GB"/>
-                                <!-- 保留最近的60个归档文件 -->
-                                <IfAccumulatedFileCount exceeds="60"/>
+                                <!-- 保留最近的100M归档文件 -->
+                                <IfAccumulatedFileSize exceeds="100 MB"/>
+                                <!-- 保留最近的30个归档文件 -->
+                                <IfAccumulatedFileCount exceeds="30"/>
                             </IfAny>
                         </IfLastModified>
                     </IfFileName>
