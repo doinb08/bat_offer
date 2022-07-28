@@ -1,11 +1,11 @@
 package com.doinb.reflect;
 
 /**
- * @author bi.wang
+ * @author zk
  * @description TODO
  * @createTime 2022/07/28
  */
-public class UserDao extends BaseDaoImpl<Users> {
+public class UserDao extends BaseDaoImpl<TestUser> {
 
 
 }

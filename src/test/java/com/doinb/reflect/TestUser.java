@@ -5,5 +5,5 @@ package com.doinb.reflect;
  * @description TODO
  * @createTime 2022/07/28
  */
-public class Users {
+public class TestUser {
 }
