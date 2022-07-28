@@ -64,11 +64,11 @@ public class SwaggerController {
         }
 
         // 获取bean的三种方式
-        UserService userService1 = SpringContextHolder.getBean(UserService.class);
-        log.info("userService1={}", userService1);
-
-        UserServiceImpl userService2 = (UserServiceImpl) SpringUtil.getBean(UserService.class);
-        log.info("userService2={}", userService2);
+//        UserService userService1 = SpringContextHolder.getBean(UserService.class);
+//        log.info("userService1={}", userService1);
+//
+//        UserServiceImpl userService2 = (UserServiceImpl) SpringUtil.getBean(UserService.class);
+//        log.info("userService2={}", userService2);
 
 
         UserServiceImpl userService3 = (UserServiceImpl) beanMap.get("userServiceImpl");
