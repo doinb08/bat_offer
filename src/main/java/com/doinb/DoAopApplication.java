@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.env.Environment;
 
@@ -24,8 +25,11 @@ import org.springframework.core.env.Environment;
  * <artifactId>aspectjweaver</artifactId>
  * <version>1.8.3</version>
  * </dependency>
+ *
+ *  cn.hutool.extra.spring 解决hutool工具扫描不到bean问题
  */
-@EnableAspectJAutoProxy
+//@EnableAspectJAutoProxy
+@ComponentScan(basePackages={"com.*", "cn.hutool.extra.spring"})
 @SpringBootApplication(exclude = {
         DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class,
         DataSourceTransactionManagerAutoConfiguration.class

@@ -7,7 +7,7 @@ import lombok.Data;
 public class UserVo {
 
     @ApiModelProperty(value = "用户ID")
-    private String userId;
+    private Long userId;
 
     @ApiModelProperty(value = "年龄")
     private String age;
