@@ -89,6 +89,9 @@ public class LambdaTest {
         Map<String, List<Demo>> demoOder = demos.stream().collect(Collectors.groupingBy(Demo::getAge));
         System.out.println(demoOder);
 
+        System.out.println("#根据age获取值#");
+        System.out.println(demoOder.get("12"));
+
         System.out.println("========================================================\n");
 
         // 收集为map
@@ -110,7 +113,7 @@ public class LambdaTest {
     private List<Student> getStudents() {
         List<Student> list = new ArrayList<>();
         list.add(new Student().setAge("12").setSex(1).setName("张三丰"));
-        list.add(new Student().setAge("13").setSex(1).setName("赵无极"));
+        list.add(new Student().setAge("12").setSex(1).setName("赵无极"));
         list.add(new Student().setAge("11").setSex(1).setName("冯绍峰"));
         list.add(new Student().setAge("18").setSex(0).setName("杨幂"));
         list.add(new Student().setAge("20").setSex(1).setName("tfboy"));

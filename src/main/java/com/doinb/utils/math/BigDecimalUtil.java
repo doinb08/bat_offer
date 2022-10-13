@@ -2,7 +2,6 @@ package com.doinb.utils.math;
 
 import cn.hutool.core.lang.Assert;
 import cn.hutool.core.util.StrUtil;
-import com.sun.istack.internal.NotNull;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -61,7 +60,7 @@ public class BigDecimalUtil {
      *
      * @param val value值 只接受BigDecimal类型和String类型的数字
      */
-    public static BigDecimalUtil build(@NotNull Object val) {
+    public static BigDecimalUtil build(Object val) {
         Assert.isTrue(val != null, "param cannot be null!");
         return val instanceof BigDecimal ? build(((BigDecimal) val)) : build(val.toString());
     }
@@ -71,7 +70,7 @@ public class BigDecimalUtil {
      *
      * @param val value值
      */
-    public static BigDecimalUtil build(@NotNull String val) {
+    public static BigDecimalUtil build(String val) {
         return new BigDecimalUtil(strToDecimal(val));
     }
 
@@ -80,7 +79,7 @@ public class BigDecimalUtil {
      *
      * @param val value值
      */
-    public static BigDecimalUtil build(@NotNull BigDecimal val) {
+    public static BigDecimalUtil build(BigDecimal val) {
         Assert.isTrue(val != null, "param cannot be null!");
         return new BigDecimalUtil(val);
     }
@@ -90,7 +89,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean gt(@NotNull BigDecimalUtil value) {
+    public boolean gt(BigDecimalUtil value) {
         return gt(value.getValue());
     }
 
@@ -99,7 +98,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean gt(@NotNull BigDecimal value) {
+    public boolean gt(BigDecimal value) {
         return this.value.compareTo(value) > ZERO;
     }
 
@@ -108,7 +107,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean gt(@NotNull String value) {
+    public boolean gt(String value) {
         return gt(strToDecimal(value));
     }
 
@@ -117,7 +116,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean gte(@NotNull BigDecimalUtil value) {
+    public boolean gte(BigDecimalUtil value) {
         return gte(value.getValue());
     }
 
@@ -126,7 +125,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean gte(@NotNull BigDecimal value) {
+    public boolean gte(BigDecimal value) {
         return this.value.compareTo(value) >= ZERO;
     }
 
@@ -135,7 +134,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean gte(@NotNull String value) {
+    public boolean gte(String value) {
         return gte(strToDecimal(value));
     }
 
@@ -144,7 +143,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean lt(@NotNull BigDecimalUtil value) {
+    public boolean lt(BigDecimalUtil value) {
         return lt(value.getValue());
     }
 
@@ -153,7 +152,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean lt(@NotNull BigDecimal value) {
+    public boolean lt(BigDecimal value) {
         return this.value.compareTo(value) < ZERO;
     }
 
@@ -162,7 +161,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean lt(@NotNull String value) {
+    public boolean lt(String value) {
         return lt(strToDecimal(value));
     }
 
@@ -171,7 +170,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean lte(@NotNull BigDecimalUtil value) {
+    public boolean lte(BigDecimalUtil value) {
         return lte(value.getValue());
     }
 
@@ -180,7 +179,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean lte(@NotNull BigDecimal value) {
+    public boolean lte(BigDecimal value) {
         return this.value.compareTo(value) <= ZERO;
     }
 
@@ -189,7 +188,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean lte(@NotNull String value) {
+    public boolean lte(String value) {
         return lte(strToDecimal(value));
     }
 
@@ -198,7 +197,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean eq(@NotNull BigDecimalUtil value) {
+    public boolean eq(BigDecimalUtil value) {
         return eq(value.getValue());
     }
 
@@ -207,7 +206,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean eq(@NotNull BigDecimal value) {
+    public boolean eq(BigDecimal value) {
         return this.value.compareTo(value) == ZERO;
     }
 
@@ -216,7 +215,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean eq(@NotNull String value) {
+    public boolean eq(String value) {
         return eq(strToDecimal(value));
     }
 
@@ -225,7 +224,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean neq(@NotNull BigDecimalUtil value) {
+    public boolean neq(BigDecimalUtil value) {
         return !eq(value);
     }
 
@@ -234,7 +233,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean neq(@NotNull BigDecimal value) {
+    public boolean neq(BigDecimal value) {
         return !eq(value);
     }
 
@@ -243,7 +242,7 @@ public class BigDecimalUtil {
      *
      * @param value value
      */
-    public boolean neq(@NotNull String value) {
+    public boolean neq(String value) {
         return !eq(value);
     }
 
@@ -253,7 +252,7 @@ public class BigDecimalUtil {
      * @param small 小值
      * @param large 大值
      */
-    public boolean isBetweenOrEq(@NotNull BigDecimal small, @NotNull BigDecimal large) {
+    public boolean isBetweenOrEq(BigDecimal small, BigDecimal large) {
         return lte(large) && gte(small);
     }
 
@@ -263,7 +262,7 @@ public class BigDecimalUtil {
      * @param small 小值
      * @param large 大值
      */
-    public boolean isBetween(@NotNull BigDecimal small, @NotNull BigDecimal large) {
+    public boolean isBetween(BigDecimal small, BigDecimal large) {
         return lt(large) && gt(small);
     }
 
@@ -273,7 +272,7 @@ public class BigDecimalUtil {
      * @param small 小值
      * @param large 大值
      */
-    public boolean isBetweenOrEq(@NotNull BigDecimalUtil small, @NotNull BigDecimalUtil large) {
+    public boolean isBetweenOrEq(BigDecimalUtil small, BigDecimalUtil large) {
         return lte(large) && gte(small);
     }
 
@@ -283,7 +282,7 @@ public class BigDecimalUtil {
      * @param small 小值
      * @param large 大值
      */
-    public boolean isBetween(@NotNull BigDecimalUtil small, @NotNull BigDecimalUtil large) {
+    public boolean isBetween(BigDecimalUtil small, BigDecimalUtil large) {
         return lt(large) && gt(small);
     }
 
@@ -293,7 +292,7 @@ public class BigDecimalUtil {
      * @param small 小值
      * @param large 大值
      */
-    public boolean isBetweenOrEq(@NotNull String small, @NotNull String large) {
+    public boolean isBetweenOrEq(String small, String large) {
         return lte(large) && gte(small);
     }
 
@@ -303,7 +302,7 @@ public class BigDecimalUtil {
      * @param small 小值
      * @param large 大值
      */
-    public boolean isBetween(@NotNull String small, @NotNull String large) {
+    public boolean isBetween(String small, String large) {
         return lt(large) && gt(small);
     }
 
@@ -312,7 +311,7 @@ public class BigDecimalUtil {
      *
      * @param value 加数
      */
-    public BigDecimalUtil add(@NotNull BigDecimal value) {
+    public BigDecimalUtil add(BigDecimal value) {
         return build(this.value.add(value));
     }
 
@@ -321,7 +320,7 @@ public class BigDecimalUtil {
      *
      * @param value 加数
      */
-    public BigDecimalUtil add(@NotNull BigDecimalUtil value) {
+    public BigDecimalUtil add(BigDecimalUtil value) {
         return add(value.getValue());
     }
 
@@ -330,7 +329,7 @@ public class BigDecimalUtil {
      *
      * @param value 加数
      */
-    public BigDecimalUtil add(@NotNull String value) {
+    public BigDecimalUtil add(String value) {
         return add(strToDecimal(value));
     }
 
@@ -339,7 +338,7 @@ public class BigDecimalUtil {
      *
      * @param value 减数
      */
-    public BigDecimalUtil sub(@NotNull BigDecimal value) {
+    public BigDecimalUtil sub(BigDecimal value) {
         return build(this.value.subtract(value));
     }
 
@@ -348,7 +347,7 @@ public class BigDecimalUtil {
      *
      * @param value 减数
      */
-    public BigDecimalUtil sub(@NotNull BigDecimalUtil value) {
+    public BigDecimalUtil sub(BigDecimalUtil value) {
         return sub(value.getValue());
     }
 
@@ -357,7 +356,7 @@ public class BigDecimalUtil {
      *
      * @param value 减数
      */
-    public BigDecimalUtil sub(@NotNull String value) {
+    public BigDecimalUtil sub(String value) {
         return sub(strToDecimal(value));
     }
 
@@ -366,7 +365,7 @@ public class BigDecimalUtil {
      *
      * @param value 乘数
      */
-    public BigDecimalUtil mul(@NotNull BigDecimal value) {
+    public BigDecimalUtil mul(BigDecimal value) {
         return build(this.value.multiply(value));
     }
 
@@ -375,7 +374,7 @@ public class BigDecimalUtil {
      *
      * @param value 乘数
      */
-    public BigDecimalUtil mul(@NotNull BigDecimalUtil value) {
+    public BigDecimalUtil mul(BigDecimalUtil value) {
         return mul(value.getValue());
     }
 
@@ -384,7 +383,7 @@ public class BigDecimalUtil {
      *
      * @param value 乘数
      */
-    public BigDecimalUtil mul(@NotNull String value) {
+    public BigDecimalUtil mul(String value) {
         return mul(strToDecimal(value));
     }
 
@@ -393,7 +392,7 @@ public class BigDecimalUtil {
      *
      * @param value 除数
      */
-    public BigDecimalUtil div(@NotNull BigDecimal value) {
+    public BigDecimalUtil div(BigDecimal value) {
         return div(value, DEF_DIV_SCALE);
     }
 
@@ -402,7 +401,7 @@ public class BigDecimalUtil {
      *
      * @param value 除数
      */
-    public BigDecimalUtil div(@NotNull BigDecimalUtil value) {
+    public BigDecimalUtil div(BigDecimalUtil value) {
         return div(value.getValue(), DEF_DIV_SCALE);
     }
 
@@ -411,7 +410,7 @@ public class BigDecimalUtil {
      *
      * @param value 除数
      */
-    public BigDecimalUtil div(@NotNull String value) {
+    public BigDecimalUtil div(String value) {
         return div(strToDecimal(value), DEF_DIV_SCALE);
     }
 
@@ -421,7 +420,7 @@ public class BigDecimalUtil {
      * @param value 除数
      * @param scale scale
      */
-    public BigDecimalUtil div(@NotNull BigDecimal value, @NotNull int scale) {
+    public BigDecimalUtil div(BigDecimal value, int scale) {
         Assert.isTrue(scale >= ZERO, "The scale must be a positive integer or zero");
         //0除以任何数都为0
         if (eq(BigDecimal.ZERO)) {
@@ -438,7 +437,7 @@ public class BigDecimalUtil {
      * @param value 除数
      * @param scale scale
      */
-    public BigDecimalUtil div(@NotNull BigDecimalUtil value, @NotNull int scale) {
+    public BigDecimalUtil div(BigDecimalUtil value, int scale) {
         return div(value.getValue(), scale);
     }
 
@@ -448,7 +447,7 @@ public class BigDecimalUtil {
      * @param value 除数
      * @param scale scale
      */
-    public BigDecimalUtil div(@NotNull String value, @NotNull int scale) {
+    public BigDecimalUtil div(String value, int scale) {
         return div(strToDecimal(value), scale);
     }
 
@@ -463,7 +462,7 @@ public class BigDecimalUtil {
     /**
      * 四舍五入保留scale位
      */
-    public BigDecimalUtil round(@NotNull int scale) {
+    public BigDecimalUtil round(int scale) {
         Assert.isTrue(scale >= ZERO, "The scale must be a positive integer or zero");
         BigDecimal one = BigDecimal.ONE;
         return build(this.value.divide(one, scale, BigDecimal.ROUND_HALF_UP));
@@ -505,7 +504,7 @@ public class BigDecimalUtil {
     /**
      * setter
      */
-    public void setValue(@NotNull BigDecimal value) {
+    public void setValue(BigDecimal value) {
         this.value = value;
     }
 
