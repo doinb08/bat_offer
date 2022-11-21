@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- JedisPool配置 -->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <!-- 最小空闲数 -->
+        <property name="minIdle" value="${redis.jedis.pool.minIdle:4}"/>
+
+        <!-- 最大空闲数 -->
+        <property name="maxIdle" value="${redis.jedis.pool.maxIdle:16}"/>
+
+        <!-- 最大连接数 -->
+        <property name="maxTotal" value="${redis.jedis.pool.maxTotal:200}"/>
+
+        <!-- 最大等待时间 单位毫秒（ms） -->
+        <property name="maxWaitMillis" value="${redis.jedis.pool.maxWaitMillis:60000}"/>
+
+        <!-- 删除间隔 -->
+        <property name="timeBetweenEvictionRunsMillis" value="${redis.jedis.pool.timeBetweenEvictionRunsMillis:-1}"/>
+
+        <!-- 使用连接时测试连接是否可用 -->
+        <property name="testOnBorrow" value="${redis.jedis.pool.testOnBorrow:true}"/>
+        <property name="testOnReturn" value="${redis.jedis.pool.testOnReturn:true}"/>
+        <property name="testOnCreate" value="${redis.jedis.pool.testOnCreate:true}"/>
+    </bean>
+</beans>

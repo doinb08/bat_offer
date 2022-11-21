@@ -4,3 +4,5 @@
 *.iml
 *.ipr
 /target
+/bat_logs/
+/temp/ip2region.db

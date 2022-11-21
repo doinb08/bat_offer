@@ -1,5 +1,11 @@
 package com.doinb.collections;
 
+import com.alibaba.fastjson.JSON;
+import com.google.common.collect.Maps;
+import org.apache.commons.codec.digest.DigestUtils;
+
+import java.util.*;
+
 /**
  * 手写HashMap
  *
@@ -61,16 +67,60 @@ public class MyHashMap {
     }
 
     public static void main(String[] args) {
-        MyHashMap hashMap = new MyHashMap();
-        hashMap.put("kc", "cc");
-        hashMap.put("kb", "bb");
-        hashMap.put("kd", "dd");
-        hashMap.put("ks", "ssss");
+        // 测试MD5加密
+        List<String> doc = new ArrayList<>();
+        doc.add("google");
+        doc.add("rinoob");
+        String string = JSON.toJSONString(doc);
+        System.out.println("string"+string);
+        String sign = DigestUtils.md5Hex(string).toUpperCase();
+        // E6721A175CD2D3DB5F3E6EAABC159E10
+        // E6721A175CD2D3DB5F3E6EAABC159E10
+        // E6721A175CD2D3DB5F3E6EAABC159E10  -- 多次加密结果一致
+        System.out.println(sign);
+        System.out.println("加密长度" + sign.length());
 
-        System.out.println(hashMap);
+        Map<String, String> map = new HashMap<>();
+        Hashtable<String, String> hashTable = new Hashtable<>();
+        hashTable.put("google", "google.com");
+        map.put("google", "google.com");
+        map.put("rinoob", "runoob.com");
 
-        int hash = "kc".hashCode();
-        System.out.println(myHash(hash, 16));
+        ArrayList<String> sites = new ArrayList<>();
+
+        sites.add("Runoob");
+        sites.add("Google");
+        sites.add("Wiki");
+        sites.add("Taobao");
+        System.out.println("网站列表: " + sites);
+        // 将ArrayList转换为String类型
+        String list = sites.toString();
+        System.out.println("String: " + list);
+
+        sites.removeIf(e ->{ return e.contains("Taobao");});
+
+        ArrayList clone = (ArrayList)sites.clone();
+
+
+        clone.forEach(e->{
+            System.out.println(e + " clone ");
+        });
+
+        sites.forEach(e->{
+            System.out.println(e + " ");
+        });
+
+//
+//        MyHashMap hashMap = new MyHashMap();
+//        hashMap.put("kc", "cc");
+//        hashMap.put("kb", "bb");
+//        hashMap.put("kd", "dd");
+//        hashMap.put("ks", "ssss");
+//
+//        System.out.println(hashMap);
+//
+//        int hash = "kc".hashCode();
+//        System.out.println(myHash(hash, 16));
     }
 
     // hash只是为了散列，作用一样，但并不是结果值一样。

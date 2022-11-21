@@ -8,3 +8,6 @@ spring:
     name: doinb-demo-service
   profiles:
     active: dev
+logging:
+  level:
+    org.springframework.boot.web.embedded.tomcat: debug

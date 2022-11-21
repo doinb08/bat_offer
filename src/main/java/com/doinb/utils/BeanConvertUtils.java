@@ -9,9 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author oxhainan
- */
 public class BeanConvertUtils {
     /**
      * 方法说明：将bean转化为另一种bean实体

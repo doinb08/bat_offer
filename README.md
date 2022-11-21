@@ -1,7 +1,41 @@
-# BAT_OFFER
-2019-2020年互联网公司高频重点面试题
+<h2 align="center"><code>2019-2020年互联网公司高频重点面试题</code></h2>
 
-## 想要成为一名出色的程序员首先要具备如下能力
+<br>
+    <p align="center"><i>互联网公司Java高频面试指南</i></p>
+<br>
+
+<p align="center">
+  <a href="https://github.com/doinb08/bat_offer.git">
+    <img src="https://img.shields.io/badge/Branch-master-green.svg?longCache=true"
+        alt="Branch">
+  </a>
+  <a href="https://github.com/doinb08/bat_offer/stargazers">
+    <img src="https://img.shields.io/github/stars/doinb08/bat_offer.svg?label=Stars&style=social"
+        alt="Stars">
+  </a>
+    <a href="https://github.com/doinb08/bat_offer/network/members">
+    <img src="https://img.shields.io/github/forks/doinb08/bat_offer.svg?label=Forks&style=social"
+        alt="Forks">
+  </a>
+  <a href="https://github.com/doinb08/bat_offer">
+    <img src="https://img.shields.io/badge/License-GNU-blue.svg?longCache=true"
+        alt="License">
+  </a>
+   <a href="https://github.com/doinb08/bat_offer">
+   <img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"
+        alt="Awesome">
+  </a>
+</p>
+<br>
+    <div align="center">
+      Created by
+      <a href="https://github.com/doinb08">doinb</a>
+    </div>
+<br>
+
+****
+
+# 高级Java程序员的核心竞争力
 > 1. Java基础扎实、掌握JVM原理、多线程、网络原理、设计模式、常用数据结构和算法。
 > 2. 深入理解Spring,Spring MVC Mybatis等开源框架设计原理及底层架构，研究过部分核心功能源码。
 > 3. 深入理解Redis线程模型，熟练掌握Redis的核心数据结构的使用场景，熟悉各种缓存高并发的使用场景，比如缓存雪崩，缓存穿透，缓存失效，热点缓存重建等。
@@ -14,12 +48,6 @@
 
 > 10.具备应用程序从构建、部署、测试和发布过程的自动化DevOps能力，如：Docker、K8s、Jenkins等技术栈。
 
-## Spring源码专题视频学习资料视频地址: 
-> https://www.bilibili.com/video/BV1yE41187A3
-
-## JUC专题视频学习资料视频地址：
-> https://www.bilibili.com/video/av68723403
-
 ## 本工程演示需要用到spring，故建立一个简易版的springboot工程，启动本工程必备环境：
 >  1. jdk1.8_xx
 >  2. maven 3.6.x
@@ -28,7 +56,8 @@
 
 ## java工具类库-提升编码效率
 >https://github.com/looly/hutool  
-https://apidoc.gitee.com/loolly/hutool/
+https://apidoc.gitee.com/loolly/hutool/   
+[前后端框架脚手架](https://blog.csdn.net/zj7321/article/details/81586244)
 
 ## 分库分表面试题
 >http://www.imooc.com/article/301836  
@@ -53,8 +82,8 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 >[视频学习Netty](https://www.bilibili.com/video/BV17t41137su?p=2)  
 
 ## 面试专场
->[面试技巧1](https://mp.weixin.qq.com/s/_LIPtYukiysDnsLc1erBhw)    
-[面试技巧2](https://www.cnblogs.com/JavaArchitect/p/12298114.html)    
+>[面试技巧-进大厂也就这回事](https://mp.weixin.qq.com/s/_LIPtYukiysDnsLc1erBhw)    
+[面试技巧-如何把面试官的提问引导到自己准备好的范围内](https://www.cnblogs.com/JavaArchitect/p/12298114.html)    
 [Redis面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486246&idx=1&sn=c9c670ce5d4e17d156bcc9e309efde98&chksm=f94a8acfce3d03d97a6dce52a86d9898dcfd8c25309e6121fa4b2aa6a9c4c8079c29e4099a70&scene=21#wechat_redirect)  
 [Spring Boot面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486357&idx=1&sn=126e2f979906e823aad46c93d310d820&chksm=f94a8a7cce3d036af7e805eab62bc323581a02c13e4ed8a87b91b1324f3791fc08a0e81fd312&scene=21#wechat_redirect)  
 [Tomcat面试题（2020最新版）](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486250&idx=1&sn=7de9aebd26dd06b5e27390f8cd5652b9&chksm=f94a8ac3ce3d03d5759d865d84052b675f9360b11369d4f44e63e815b6160e6d2ccd279464f0&scene=21#wechat_redirect)  
@@ -69,4 +98,25 @@ https://juejin.im/post/5e48a9af6fb9a07cc200c203
 [面试官问：为什么需要消息队列？使用消息队列有什么好处？](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486211&idx=1&sn=28b470281c083d7453f08b1c3377b83f&chksm=f94a8aeace3d03fcf3ffefa2eca67ff4b4f9cd426b7b4ba547c03863b7b0712e1f20896abfd0&scene=21#wechat_redirect)  
 [Spring MVC 面经](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486171&idx=1&sn=57c3feef86b0c7d5d049032c82eb2ed5&chksm=f94a8b32ce3d02248d797fa781fab04a8baa4d881415bfd88088f650cdb7b24204142ccf0154&scene=21#wechat_redirect)   
 [Spring经典面试题总结](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486096&idx=1&sn=8a471403c996fb61b05bd631970d2e1b&chksm=f94a8b79ce3d026f881d382996db1a6875c1b6895dd12129c9091e690612c14611a56e69518b&scene=21#wechat_redirect)   
-[史上最全多线程面试题 ！](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486083&idx=1&sn=b431e6e522fe202279b24ae80ddfdcff&chksm=f94a8b6ace3d027c5a5b21c7bce84ef879307f0e30f4b6398a3936b2e64f48fd569ed17b05ff&scene=21#wechat_redirect)  
+[史上最全多线程面试题 ！](https://mp.weixin.qq.com/s?__biz=MzUxNDA1NDI3OA==&mid=2247486083&idx=1&sn=b431e6e522fe202279b24ae80ddfdcff&chksm=f94a8b6ace3d027c5a5b21c7bce84ef879307f0e30f4b6398a3936b2e64f48fd569ed17b05ff&scene=21#wechat_redirect)    
+[Docker入门视频教程](https://www.bilibili.com/video/BV1Vs411E7AR)      
+[Docker详细讲解](http://www.iocoder.cn/Docker/good-collection/)    
+[CORS跨域讲解](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)   
+[MySQL索引面试题](https://www.jianshu.com/p/c82148473235)  
+[数据库分库分表shardingJDBC-数据迁移难题](https://www.iteye.com/blog/mingkongeye-2300683)   
+[如果你是一个 Java 面试官，你会问哪些问题？](https://www.zhihu.com/question/443280657/answer/1785592611)   
+[高级JAVA面试必杀技](https://www.zhihu.com/question/443280657)  
+
+## 优秀开源项目推荐  
+[Spring Cloud 系列项目学习案例](https://github.com/YunaiV/SpringBoot-Labs)     
+[JAVA全套技术学习-芋道源码](http://www.iocoder.cn/?bilibili&BV1bE411p7As#)    
+
+## MyBatis极速入门
+[MyBatis官方使用文档](https://mybatis.org/mybatis-3/zh/dynamic-sql.html)   
+[MyBatis源码-GitHub地址](https://github.com/mybatis/mybatis-3)    
+
+## SpringCloud学习视频推荐
+[2020尚硅谷《谷粒商城》-技术栈非常全面-网盘提取码：2zdr](https://pan.baidu.com/s/1Zb-6pOPj6GyozoBMyiGHww)  
+[微服务视频教程-尚硅谷2020最新版 SpringCloud 框架开发教程全套完整版从入门到精通](https://www.bilibili.com/video/BV18E411x7eT)      
+[Spring源码专题视频学习资料](https://www.bilibili.com/video/BV1yE41187A3)   
+[juc专题视频学习资料](https://www.bilibili.com/video/av68723403)  

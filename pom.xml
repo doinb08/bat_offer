@@ -15,7 +15,7 @@
     <groupId>com.interview</groupId>
     <artifactId>doinb</artifactId>
     <version>1.0.0</version>
-    <description>2019年互联网大厂高频重点面试题</description>
+    <description>2019-2020年互联网大厂高频重点面试题</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -37,6 +37,19 @@
     </repositories>
 
     <dependencies>
+        <!--分布式缓存-->
+<!--        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>2.0.14.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.3</version>
+        </dependency>
+        -->
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -56,6 +69,21 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--log4j2 日志-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <!-- spring-boot依赖 -->
 
         <!-- aspectj切面配置 -->
@@ -70,6 +98,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <!-- optional标签是：防止将lombok依赖传递到其他模块中,当你依赖某各工程很庞大或很可能与其他工程的jar包冲突的时候，
+            建议加上该选项，可以节省开销，同时减少依赖冲突 -->
             <optional>true</optional>
         </dependency>
 
@@ -112,6 +142,24 @@
             <groupId>org.lionsoul</groupId>
             <artifactId>ip2region</artifactId>
             <version>1.7.2</version>
+        </dependency>
+
+        <!--swagger文档配置-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+            <version>1.9.6</version>
+        </dependency>
+        <!-- EasyExcel -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>2.2.6</version>
         </dependency>
     </dependencies>
 
